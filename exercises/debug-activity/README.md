@@ -108,13 +108,13 @@ uses floating point numbers to represent currency.
    * Lines 18-19 create and populate dataclass objects (`pizz1` and `pizza2`) 
    representing pizzas, which are then added to an array named `pizza_list` used 
    in the `PizzaOrder` dataclass used as input to the Workflow. 
-3. Create and populate another Pizza object, named `pizza3`, representing a third
+2. Create and populate another Pizza object, named `pizza3`, representing a third
    pizza added to the order. It should have the following values:
    * Description: "Medium, with extra cheese"
 	* Price: 1300
-4. Add `pizza3` to the `pizza_list` list
-5. Save the changes and close the editor
-6. Submit this pizza order by starting the Workflow: `python start.py`
+3. Add `pizza3` to the `pizza_list` list
+4. Save the changes and close the editor
+5. Submit this pizza order by starting the Workflow: `python start.py`
 
 Although the Workflow *should* complete within a few seconds, you will 
 probably find that it never does, so open the Web UI and look at the 
