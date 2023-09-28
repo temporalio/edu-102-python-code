@@ -26,9 +26,7 @@ class PizzaOrderWorkflow:
 
         address = order.address
 
-        total_price = 0
-        for pizza in order.items:
-            total_price += pizza.price
+        total_price = sum(pizza.price for pizza in order.items)
 
         if order.is_delivery is False:
             error_message = "Delivery option not selected, terminating Workflow"
