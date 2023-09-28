@@ -32,8 +32,7 @@ course is activated as detailed in the course [README](../../README.md#setup-you
 
 1. Edit the `workflow.py` file
 2. Add an import for `import logging` (this allows you to use the Python logger)
-3. Set your logging level to `logging.INFO` in the `__init__` method and delete the
-    `pass`
+3. Set your logging level to `logging.INFO` at the top of the file
 4. Add a new line in the `run` method to log a message at the info level
     1. It should mention that the Workflow method has been invoked
     2. It should also include the variables passes as input

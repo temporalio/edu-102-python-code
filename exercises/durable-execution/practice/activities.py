@@ -3,11 +3,12 @@ from temporalio import activity
 
 from shared import TranslationActivityInput, TranslationActivityOutput
 
+# TODO Setup logging config and set level to INFO
+
 
 class TranslationActivities:
     def __init__(self, session):
         self.session = session
-        # TODO Setup logging config and set level to INFO
 
     @activity.defn
     async def translate_term(

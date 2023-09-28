@@ -2,10 +2,9 @@ import logging
 from temporalio import activity
 from shared import ChargeInput, CustomerInfo
 
+logging.basicConfig(level=logging.INFO)
 
 class LoanProcessingActivities:
-    def __init__(self):
-        logging.basicConfig(level=logging.INFO)
 
     @activity.defn
     async def charge_customer(self, input: ChargeInput) -> str:

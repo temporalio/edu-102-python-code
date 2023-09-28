@@ -5,11 +5,10 @@ from time import time
 import aiohttp
 from shared import OrderConfirmation, Address, Distance, Bill
 
+logging.basicConfig(level=logging.INFO)
+
 
 class PizzaOrderActivities:
-    def __init__(self):
-        logging.basicConfig(level=logging.INFO)
-
     @activity.defn
     async def get_distance(self, address: Address) -> Distance:
         logging.info("get_distance invoked; determining distance to customer address")

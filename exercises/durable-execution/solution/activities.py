@@ -4,10 +4,12 @@ from temporalio import activity
 from shared import TranslationActivityInput, TranslationActivityOutput
 
 
+logging.basicConfig(level=logging.INFO)
+
+
 class TranslationActivities:
     def __init__(self, session):
         self.session = session
-        logging.basicConfig(level=logging.DEBUG)
 
     @activity.defn
     async def translate_term(

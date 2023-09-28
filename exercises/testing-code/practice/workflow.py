@@ -12,12 +12,11 @@ with workflow.unsafe.imports_passed_through():
         TranslationActivityInput,
     )
 
+logging.basicConfig(level=logging.INFO)
+
 
 @workflow.defn
 class TranslationWorkflow:
-    def __init__(self):
-        logging.basicConfig(level=logging.DEBUG)
-
     @workflow.run
     async def run(self, input: TranslationWorkflowInput) -> TranslationWorkflowOutput:
         workflow.logger.info(f"TranslationWorkflow invoked with {input}")

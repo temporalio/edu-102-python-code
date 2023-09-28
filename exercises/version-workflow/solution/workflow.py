@@ -9,11 +9,10 @@ with workflow.unsafe.imports_passed_through():
     from activities import LoanProcessingActivities
     from shared import CustomerInfo, ChargeInput
 
+logging.basicConfig(level=logging.INFO)
 
 @workflow.defn
 class LoanProcessingWorkflow:
-    def __init__(self):
-        logging.basicConfig(level=logging.DEBUG)
 
     @workflow.run
     async def process_loan(self, info: CustomerInfo) -> str:

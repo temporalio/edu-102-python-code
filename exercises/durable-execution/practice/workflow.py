@@ -13,13 +13,11 @@ with workflow.unsafe.imports_passed_through():
         TranslationActivityInput,
     )
 
+# TODO Setup logging config and set level to INFO and delete pass
+
 
 @workflow.defn
 class TranslationWorkflow:
-    def __init__(self):
-        # TODO Setup logging config and set level to INFO and delete pass
-        pass
-
     @workflow.run
     async def run(self, input: TranslationWorkflowInput) -> TranslationWorkflowOutput:
         workflow.logger.info(f"TranslationWorkflow invoked with {input}")
