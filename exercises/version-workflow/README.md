@@ -13,6 +13,18 @@ Make your changes to the code in the `practice` subdirectory (look for
 the code). If you need a hint or want to verify your changes, look at 
 the complete version in the `solution` subdirectory.
 
+## Prerequisite: Ensure Your Virtual Environment is activated
+If you haven't already started the Translation Microservice used by this exercise, 
+do so in a separate terminal.
+
+**Note: If you're using the Gitpod environment to run this exercise you can
+skip this step. An instance of the Microservice is already running in your
+environment**
+
+### Activate the Virtual Environment
+1. Ensure that the virtual environment you setup at the beginning of the
+course is activated as detailed in the course [README](../../README.md#setup-your-python-virtual-environment)
+
 
 ## Part A: Run a Workflow to Completion
 

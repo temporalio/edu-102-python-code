@@ -12,7 +12,7 @@ Make your changes to the code in the `practice` subdirectory (look for
 the code). If you need a hint or want to verify your changes, look at 
 the complete version in the `solution` subdirectory.
 
-## Prerequisite: Ensure the Microservice is running and your Virtual Environment is activated
+## Prerequisite: Ensure Your Virtual Environment is activated
 If you haven't already started the Translation Microservice used by this exercise, 
 do so in a separate terminal.
 

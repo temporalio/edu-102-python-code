@@ -43,13 +43,21 @@ is a virtual environment already setup for you and you can skip this section.
 $ python -m venv env
 ```
 
-3. Activate the virtual environment
+3. Activate the virtual environment 
+
+**Linux/Mac**:
 
 ```
 $ source env/bin/activate
 ```
 
-Once the environment is active you should see `(env)` prepended to your bash prompt similar
+**Windows**:
+
+```
+$ env\Scripts\activate
+```
+
+Once the environment is active you should see `(env)` prepended to your prompt similar
 to below
 
 ```
@@ -65,8 +73,16 @@ python -m pip install -r requirements.txt
 5. For every new terminal you open, you will need to activate the environment using
 the following command
 
+**Linux/Mac**:
+
 ```
 $ source env/bin/activate
+```
+
+**Windows**:
+
+```
+$ env\Scripts\activate
 ```
 
 However, the packages are already installed, so there is no need to run pip again.
