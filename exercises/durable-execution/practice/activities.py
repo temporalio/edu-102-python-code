@@ -21,7 +21,7 @@ class TranslationActivities:
         async with self.session.get(url) as response:
             if response.status != 200:
                 error_message = await response.text()
-                raise Exception(error_message)
+                raise RuntimeError(error_message)
             response_json = await response.json()
             response = TranslationActivityOutput(**response_json)
             # TODO Add a logging message at the debug level stating that the
