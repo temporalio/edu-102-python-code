@@ -1,3 +1,5 @@
+import urllib.parse
+
 import aiohttp
 from shared import TranslationActivityInput, TranslationActivityOutput
 from temporalio import activity
@@ -12,7 +14,8 @@ class TranslationActivities:
         self, input: TranslationActivityInput
     ) -> TranslationActivityOutput:
         activity.logger.info(f"translate_term Activity invoked with input: {input}")
-        url = f"http://localhost:9999/translate?term={input.term}&lang={input.language_code}"
+        base = f"http://localhost:9999/translate"
+        url = f"{base}?term={urllib.parse.quote(input.term)}&lang={input.language_code}"
 
         async with self.session.get(url) as response:
             if response.status != 200:

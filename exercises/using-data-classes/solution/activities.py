@@ -1,3 +1,5 @@
+import urllib.parse
+
 import aiohttp
 from shared import TranslationActivityInput, TranslationActivityOutput
 from temporalio import activity
@@ -11,7 +13,8 @@ class TranslationActivities:
     async def translate_term(
         self, input: TranslationActivityInput
     ) -> TranslationActivityOutput:
-        url = f"http://localhost:9999/translate?term={input.term}&lang={input.language_code}"
+        base = f"http://localhost:9999/translate"
+        url = f"{base}?term={urllib.parse.quote(input.term)}&lang={input.language_code}"
 
         async with self.session.get(url) as response:
             response.raise_for_status()
