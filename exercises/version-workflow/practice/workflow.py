@@ -32,7 +32,7 @@ class LoanProcessingWorkflow:
                 number_of_periods=info.number_of_periods,
             )
 
-            charge_confirmation = await workflow.execute_activity_method(
+            await workflow.execute_activity_method(
                 LoanProcessingActivities.charge_customer,
                 charge_input,
                 start_to_close_timeout=timedelta(seconds=5),
