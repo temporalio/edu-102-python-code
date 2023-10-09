@@ -55,8 +55,8 @@ course is activated as detailed in the course [README](../../README.md#setup-you
 6. Save your change to the `workflow.py` file and exit the editor
 7. Restart the Worker by pressing Ctrl-C in the terminal window
    from step 1 and running the `python worker.py` command again
-10. Run the Workflow again: `python starter.py a100`
-11. Use the Web UI to verify that the Workflow Execution from the 
+8. Run the Workflow again: `python starter.py a100`
+9. Use the Web UI to verify that the Workflow Execution from the 
    previous step is running before proceeding with the next part
    of this exercise.
 
