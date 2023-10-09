@@ -1,9 +1,10 @@
+import aiohttp
 from shared import TranslationActivityInput, TranslationActivityOutput
 from temporalio import activity
 
 
 class TranslationActivities:
-    def __init__(self, session):
+    def __init__(self, session: aiohttp.ClientSession):
         self.session = session
 
     # TODO Replace the last two parameters with the data class you defined as input

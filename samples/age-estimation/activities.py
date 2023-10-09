@@ -1,11 +1,12 @@
 import urllib.parse
 
+import aiohttp
 from models import EstimatorResponse
 from temporalio import activity
 
 
 class AgeEstimationActivities:
-    def __init__(self, session):
+    def __init__(self, session: aiohttp.ClientSession):
         self.session = session
 
     @activity.defn
