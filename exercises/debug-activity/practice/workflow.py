@@ -1,8 +1,10 @@
-from datetime import timedelta
-from temporalio import workflow
-from temporalio.exceptions import ApplicationError
 import logging
 import asyncio
+from datetime import timedelta
+
+from temporalio import workflow
+from temporalio.exceptions import ApplicationError
+
 
 # Import activity, passing it through the sandbox without reloading the module
 with workflow.unsafe.imports_passed_through():
@@ -27,7 +29,7 @@ class PizzaOrderWorkflow:
         total_price = sum(pizza.price for pizza in order.items)
 
         if order.is_delivery is False:
-            error_message = "Delivery option not selected, terminating Workflow"
+            error_message = "delivery option not selected, terminating Workflow"
             workflow.logger.error(error_message)
             raise ApplicationError(error_message)
 
@@ -38,7 +40,7 @@ class PizzaOrderWorkflow:
         )
 
         if distance.kilometers > 25:
-            error_message = "Customer lives outside the service area"
+            error_message = "customer lives outside the service area"
             workflow.logger.error(error_message)
             raise ApplicationError(error_message)
 

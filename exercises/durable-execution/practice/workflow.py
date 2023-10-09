@@ -20,7 +20,7 @@ with workflow.unsafe.imports_passed_through():
 class TranslationWorkflow:
     @workflow.run
     async def run(self, input: TranslationWorkflowInput) -> TranslationWorkflowOutput:
-        workflow.logger.info(f"TranslationWorkflow invoked with {input}")
+        workflow.logger.info(f"translationWorkflow invoked with {input}")
 
         hello_input = TranslationActivityInput(
             language_code=input.language_code, term="hello"

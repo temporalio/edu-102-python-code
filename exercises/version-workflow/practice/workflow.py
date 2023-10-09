@@ -1,8 +1,8 @@
-from datetime import timedelta
-from temporalio import workflow
-from temporalio.exceptions import ApplicationError
 import logging
 import asyncio
+from datetime import timedelta
+
+from temporalio import workflow
 
 # Import activity, passing it through the sandbox without reloading the module
 with workflow.unsafe.imports_passed_through():
@@ -11,13 +11,13 @@ with workflow.unsafe.imports_passed_through():
 
 logging.basicConfig(level=logging.INFO)
 
+
 @workflow.defn
 class LoanProcessingWorkflow:
-
     @workflow.run
     async def process_loan(self, info: CustomerInfo) -> str:
         workflow.logger.info(
-            f"Started process_loan workflow for customer: {info.customer_id}"
+            f"started process_loan workflow for customer: {info.customer_id}"
         )
 
         confirmation = await workflow.execute_activity_method(
@@ -43,9 +43,9 @@ class LoanProcessingWorkflow:
 
             total_paid += charge_input.amount
             logging.info(
-                f"Payment complete for period {period} Total Paid: {charge_input.amount}"
+                f"payment complete for period {period} total paid: {charge_input.amount}"
             )
 
             await asyncio.sleep(3)
 
-        return f"Loan for customer {info.customer_id} has been full paid(total={total_paid})"
+        return f"loan for customer {info.customer_id} has been full paid(total={total_paid})"

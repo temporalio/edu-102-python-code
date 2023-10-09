@@ -1,7 +1,8 @@
 import pytest
-from activities import PizzaOrderActivities
 
 from temporalio.testing import ActivityEnvironment
+
+from activities import PizzaOrderActivities
 from shared import Address, Distance, Bill
 
 

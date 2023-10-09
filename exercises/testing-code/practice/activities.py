@@ -1,6 +1,7 @@
 import logging
+
 from temporalio import activity
-import aiohttp
+
 from shared import TranslationActivityInput, TranslationActivityOutput
 
 logging.basicConfig(level=logging.INFO)

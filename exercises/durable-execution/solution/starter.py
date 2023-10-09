@@ -1,8 +1,9 @@
 import asyncio
 import sys
 
-from workflow import TranslationWorkflow
 from temporalio.client import Client
+
+from workflow import TranslationWorkflow
 from shared import (
     TASK_QUEUE_NAME,
     WORKFLOW_ID,

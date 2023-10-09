@@ -19,14 +19,14 @@ logging.basicConfig(level=logging.INFO)
 class TranslationWorkflow:
     @workflow.run
     async def run(self, input: TranslationWorkflowInput) -> TranslationWorkflowOutput:
-        workflow.logger.info(f"TranslationWorkflow invoked with {input}")
+        workflow.logger.info(f"translationWorkflow invoked with {input}")
 
         hello_input = TranslationActivityInput(
             language_code=input.language_code, term="hello"
         )
 
         workflow.logger.info(
-            f"translate_term Activity invoked. Translating hello in f{input.language_code}"
+            f"translate_term Activity invoked. translating hello in f{input.language_code}"
         )
         hello_result = await workflow.execute_activity_method(
             TranslationActivities.translate_term,
@@ -35,11 +35,11 @@ class TranslationWorkflow:
         )
         hello_message = f"{hello_result.translation}, {input.name}"
 
-        workflow.logger.debug(f"Sleeping between translation calls")
+        workflow.logger.debug(f"sleeping between translation calls")
         await asyncio.sleep(10)
 
         workflow.logger.debug(
-            f"translate_term Activity invoked. Translating goodbye in f{input.language_code}"
+            f"translate_term Activity invoked. translating goodbye in f{input.language_code}"
         )
         goodbye_input = TranslationActivityInput(
             language_code=input.language_code, term="goodbye"

@@ -1,7 +1,8 @@
 import asyncio
 
-from workflow import PizzaOrderWorkflow
 from temporalio.client import Client
+
+from workflow import PizzaOrderWorkflow
 from shared import TASK_QUEUE_NAME, WORKFLOW_ID
 from utils import create_pizza_order
 

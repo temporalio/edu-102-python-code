@@ -1,5 +1,4 @@
 import asyncio
-import aiohttp
 
 from temporalio.client import Client
 from temporalio.worker import Worker

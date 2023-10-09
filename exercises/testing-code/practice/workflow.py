@@ -1,7 +1,8 @@
-from datetime import timedelta
-from temporalio import workflow
 import logging
 import asyncio
+from datetime import timedelta
+
+from temporalio import workflow
 
 # Import activity, passing it through the sandbox without reloading the module
 with workflow.unsafe.imports_passed_through():
@@ -26,7 +27,7 @@ class TranslationWorkflow:
         )
 
         workflow.logger.info(
-            f"translate_term Activity invoked. Translating hello in f{input.language_code}"
+            f"translate_term Activity invoked. translating hello in f{input.language_code}"
         )
         hello_result = await workflow.execute_activity_method(
             TranslationActivities.translate_term,
@@ -35,11 +36,11 @@ class TranslationWorkflow:
         )
         hello_message = f"{hello_result.translation}, {input.name}"
 
-        workflow.logger.debug(f"Sleeping between translation calls")
+        workflow.logger.debug(f"sleeping between translation calls")
         await asyncio.sleep(10)
 
         workflow.logger.debug(
-            f"translate_term Activity invoked. Translating goodbye in f{input.language_code}"
+            f"translate_term Activity invoked. translating goodbye in f{input.language_code}"
         )
         goodbye_input = TranslationActivityInput(
             language_code=input.language_code, term="goodbye"

@@ -1,8 +1,9 @@
 import logging
+from time import time
+
 from temporalio import activity
 from temporalio.exceptions import ApplicationError
-from time import time
-import aiohttp
+
 from shared import OrderConfirmation, Address, Distance, Bill
 
 logging.basicConfig(level=logging.INFO)
@@ -36,7 +37,7 @@ class PizzaOrderActivities:
         charge_amount = bill.amount
 
         if charge_amount > 3000:
-            logging.info("Applying discount")
+            logging.info("applying discount")
 
             charge_amount = -500
 
