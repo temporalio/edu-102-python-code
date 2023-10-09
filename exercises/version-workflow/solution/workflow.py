@@ -48,7 +48,7 @@ class LoanProcessingWorkflow:
 
             await asyncio.sleep(10)
 
-        if is_patched is True:
+        if is_patched:
             confirmation = await workflow.execute_activity_method(
                 LoanProcessingActivities.send_thank_you_to_customer,
                 info,
