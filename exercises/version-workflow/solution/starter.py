@@ -8,7 +8,7 @@ from workflow import LoanProcessingWorkflow
 
 async def main():
     # Create client connected to server at the given address
-    client = await Client.connect("localhost:7233")
+    client = await Client.connect("localhost:7233", namespace="default")
 
     db = create_customer_info_db()
 
