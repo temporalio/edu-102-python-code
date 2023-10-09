@@ -1,12 +1,11 @@
 import asyncio
-import aiohttp
 
+import aiohttp
+from activities import TranslationActivities
+from shared import TASK_QUEUE_NAME
 from temporalio.client import Client
 from temporalio.worker import Worker
-
-from activities import TranslationActivities
 from workflow import TranslationWorkflow
-from shared import TASK_QUEUE_NAME
 
 
 async def main():

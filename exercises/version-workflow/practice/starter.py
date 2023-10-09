@@ -1,10 +1,9 @@
 import asyncio
 import sys
 
-from temporalio.client import Client
-
-from workflow import LoanProcessingWorkflow
 from shared import TASK_QUEUE_NAME, WORKFLOW_ID, create_customer_info_db
+from temporalio.client import Client
+from workflow import LoanProcessingWorkflow
 
 
 async def main():

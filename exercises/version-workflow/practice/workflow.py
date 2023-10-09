@@ -1,4 +1,3 @@
-import logging
 import asyncio
 from datetime import timedelta
 
@@ -7,9 +6,7 @@ from temporalio import workflow
 # Import activity, passing it through the sandbox without reloading the module
 with workflow.unsafe.imports_passed_through():
     from activities import LoanProcessingActivities
-    from shared import CustomerInfo, ChargeInput
-
-logging.basicConfig(level=logging.INFO)
+    from shared import ChargeInput, CustomerInfo
 
 
 @workflow.defn
@@ -42,7 +39,7 @@ class LoanProcessingWorkflow:
             )
 
             total_paid += charge_input.amount
-            logging.info(
+            worker.logger.info(
                 f"payment complete for period {period} total paid: {charge_input.amount}"
             )
 

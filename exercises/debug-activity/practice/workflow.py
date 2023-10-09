@@ -1,21 +1,13 @@
-import logging
 import asyncio
 from datetime import timedelta
 
 from temporalio import workflow
 from temporalio.exceptions import ApplicationError
 
-
 # Import activity, passing it through the sandbox without reloading the module
 with workflow.unsafe.imports_passed_through():
     from activities import PizzaOrderActivities
-    from shared import (
-        Bill,
-        OrderConfirmation,
-        PizzaOrder,
-    )
-
-logging.basicConfig(level=logging.INFO)
+    from shared import Bill, OrderConfirmation, PizzaOrder
 
 
 @workflow.defn

@@ -1,8 +1,7 @@
 import urllib.parse
-import json
-from temporalio import activity
 
 from models import EstimatorResponse
+from temporalio import activity
 
 
 class AgeEstimationActivities:

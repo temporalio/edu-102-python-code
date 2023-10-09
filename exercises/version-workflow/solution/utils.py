@@ -1,4 +1,4 @@
-from shared import PizzaOrder, Customer, Address, Pizza
+from shared import Address, Customer, Pizza, PizzaOrder
 
 
 def create_pizza_order() -> PizzaOrder:

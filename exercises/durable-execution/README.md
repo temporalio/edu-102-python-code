@@ -31,31 +31,32 @@ course is activated as detailed in the course [README](../../README.md#setup-you
 ## Part A: Add Logging to the Workflow Code
 
 1. Edit the `workflow.py` file
-2. Add an import for `import logging` (this allows you to use the Python logger)
-3. Set your logging level to `logging.INFO` at the top of the file
-4. Add a new line in the `run` method to log a message at the info level
+2. Add a new line in the `run` method to log a message at the info level
     1. It should mention that the Workflow method has been invoked
     2. It should also include the variables passes as input
-5. Before each call to `execute_activity_method`, log a message at Debug level
+3. Before each call to `execute_activity_method`, log a message at Debug level
     1. This should should identify the word being translated
     2. It should also include the language code passed as input
-6. Save your changes
+4. Save your changes
 
 
 ## Part B: Add Logging to the Activity Code
 
 1. Edit the `activities.py` file
-2. Add an import for `import logging` (this allows you to use the Python logger)
-3. Set the logging level to `logging.INFO` in the `__init__` method
-4. Insert a logging statement in the `run` method `info` level, so you'll know 
+2. Insert a logging statement in the `run` method `info` level, so you'll know 
     when the Activity is invoked.
     1. Include the term being translated and the language code
-5. Near the bottom of the method, use the `debug` level to log the successful translation
+3. Near the bottom of the method, use the `debug` level to log the successful translation
 	1. Include the translated term as a name-value pair
-6. Save your changes
+4. Save your changes
 
+## Part C: Configure the Log Level
 
-## Part C: Add a Timer to the Workflow
+1. Edit the `worker.py` file
+2. Uncomment the import for `import logging` (this allows you to set the log level)
+3. Set your logging level to `logging.INFO` as the first line in the `main` function.
+
+## Part D: Add a Timer to the Workflow
 You will now add a Timer between the two Activity calls in the Workflow Definition, which will make it easier to observe durable execution in the next section.
 
 1. After the statement where `hello_message` is defined, but before the statement where
@@ -63,7 +64,7 @@ You will now add a Timer between the two Activity calls in the Workflow Definiti
 2. Just after the new log statement, use `await asyncio.sleep(10)` to set a Timer for 10 seconds
 
 
-## Part D: Observe Durable Execution
+## Part E: Observe Durable Execution
 It is typical to run Temporal applications using two or more Worker processes. Not only do additional Workers allow the application to scale, it also increases availability since another Worker can take over if a Worker crashes during Workflow Execution. You'll see this for yourself now and will learn more about how Temporal achieves this as you continue through the course.
 
 Before proceeding, make sure that there are no Workers running for this or any previous exercise. Also, please read through all of these instructions before you begin, so that you'll know when and how to react.

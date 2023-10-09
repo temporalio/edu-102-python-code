@@ -1,32 +1,30 @@
-from datetime import timedelta
-from temporalio import workflow
-import logging
 import asyncio
+from datetime import timedelta
+
+from temporalio import workflow
 
 # Import activity, passing it through the sandbox without reloading the module
 with workflow.unsafe.imports_passed_through():
     from activities import TranslationActivities
     from shared import (
+        TranslationActivityInput,
         TranslationWorkflowInput,
         TranslationWorkflowOutput,
-        TranslationActivityInput,
     )
-
-logging.basicConfig(level=logging.INFO)
 
 
 @workflow.defn
 class TranslationWorkflow:
     @workflow.run
     async def run(self, input: TranslationWorkflowInput) -> TranslationWorkflowOutput:
-        workflow.logger.info(f"translationWorkflow invoked with {input}")
+        workflow.logger.info(f"tTranslationWorkflow invoked with {input}")
 
         hello_input = TranslationActivityInput(
             language_code=input.language_code, term="hello"
         )
 
         workflow.logger.info(
-            f"translate_term Activity invoked. translating hello in f{input.language_code}"
+            f"translate_term Activity invoked. translating hello in {input.language_code}"
         )
         hello_result = await workflow.execute_activity_method(
             TranslationActivities.translate_term,

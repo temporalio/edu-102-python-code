@@ -1,12 +1,10 @@
-import pytest
 import aiohttp
-
-from temporalio.testing import WorkflowEnvironment
-from temporalio.worker import Worker
-
-from workflow import TranslationWorkflow
+import pytest
 from activities import TranslationActivities
 from shared import TranslationWorkflowInput
+from temporalio.testing import WorkflowEnvironment
+from temporalio.worker import Worker
+from workflow import TranslationWorkflow
 
 
 @pytest.mark.asyncio

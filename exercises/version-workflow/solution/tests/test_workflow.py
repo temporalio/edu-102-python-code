@@ -1,9 +1,7 @@
 import pytest
 from temporalio.client import WorkflowHistory
-
-from workflow import LoanProcessingWorkflow
-
 from temporalio.worker import Replayer
+from workflow import LoanProcessingWorkflow
 
 
 @pytest.mark.asyncio

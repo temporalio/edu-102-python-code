@@ -1,6 +1,5 @@
-from temporalio import activity
-
 from shared import TranslationActivityInput, TranslationActivityOutput
+from temporalio import activity
 
 
 class TranslationActivities:

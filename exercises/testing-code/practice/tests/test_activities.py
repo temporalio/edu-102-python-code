@@ -1,9 +1,8 @@
+import aiohttp
 import pytest
 from activities import TranslationActivities
-
-from temporalio.testing import ActivityEnvironment
 from shared import TranslationActivityInput, TranslationActivityOutput
-import aiohttp
+from temporalio.testing import ActivityEnvironment
 
 
 @pytest.mark.asyncio

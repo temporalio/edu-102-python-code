@@ -1,15 +1,13 @@
 import pytest
-
-from temporalio.testing import WorkflowEnvironment
-from temporalio.worker import Worker
+from activities import PizzaOrderActivities
+from shared import Address, Distance
 from temporalio import activity
 from temporalio.client import WorkflowFailureError
 from temporalio.exceptions import ApplicationError
-
-from workflow import PizzaOrderWorkflow
-from activities import PizzaOrderActivities
+from temporalio.testing import WorkflowEnvironment
+from temporalio.worker import Worker
 from utils import create_pizza_order_for_test
-from shared import Address, Distance
+from workflow import PizzaOrderWorkflow
 
 
 @pytest.mark.asyncio

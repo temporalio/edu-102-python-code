@@ -6,9 +6,9 @@ from temporalio import workflow
 with workflow.unsafe.imports_passed_through():
     from activities import TranslationActivities
     from shared import (
+        TranslationActivityInput,
         TranslationWorkflowInput,
         TranslationWorkflowOutput,
-        TranslationActivityInput,
     )
 
 

@@ -1,15 +1,13 @@
 import pytest
-
-from temporalio.testing import WorkflowEnvironment
-from temporalio.worker import Worker
-from temporalio import activity
-
-from workflow import TranslationWorkflow
 from shared import (
-    TranslationWorkflowInput,
     TranslationActivityInput,
     TranslationActivityOutput,
+    TranslationWorkflowInput,
 )
+from temporalio import activity
+from temporalio.testing import WorkflowEnvironment
+from temporalio.worker import Worker
+from workflow import TranslationWorkflow
 
 
 @activity.defn(name="translate_term")

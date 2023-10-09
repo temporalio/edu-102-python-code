@@ -1,16 +1,11 @@
-import logging
-
-from temporalio import activity
-
 from shared import ChargeInput, CustomerInfo
-
-logging.basicConfig(level=logging.INFO)
+from temporalio import activity
 
 
 class LoanProcessingActivities:
     @activity.defn
     async def charge_customer(self, input: ChargeInput) -> str:
-        logging.info(
+        activity.logger.info(
             f"*** charging customer***: customer_id: {input.customer_id}, amount {input.amount}, number_of_periods: {input.number_of_periods}"
         )
 
@@ -20,7 +15,7 @@ class LoanProcessingActivities:
 
     @activity.defn
     async def send_thank_you_to_customer(self, input: CustomerInfo) -> str:
-        logging.info(
+        activity.logger.info(
             f"*** sending thank you message to customer ***: customer_id: {input.customer_id}, email {input.email_address}"
         )
 

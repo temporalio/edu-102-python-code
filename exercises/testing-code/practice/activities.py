@@ -1,10 +1,5 @@
-import logging
-
-from temporalio import activity
-
 from shared import TranslationActivityInput, TranslationActivityOutput
-
-logging.basicConfig(level=logging.INFO)
+from temporalio import activity
 
 
 class TranslationActivities:
@@ -15,7 +10,7 @@ class TranslationActivities:
     async def translate_term(
         self, input: TranslationActivityInput
     ) -> TranslationActivityOutput:
-        logging.info(f"translate_term Activity invoked with input: {input}")
+        activity.logger.info(f"translate_term Activity invoked with input: {input}")
         url = f"http://localhost:9999/translate?term={input.term}&lang={input.language_code}"
 
         async with self.session.get(url) as response:
@@ -24,7 +19,7 @@ class TranslationActivities:
                 raise Exception(error_message)
             response_json = await response.json()
             response = TranslationActivityOutput(**response_json)
-            logging.debug(
+            activity.logger.debug(
                 f"translate_term completed successfully with the result: {input.term} was translated to {input.language_code}: {response.translation}"
             )
             return response

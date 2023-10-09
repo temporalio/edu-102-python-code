@@ -1,10 +1,9 @@
 import asyncio
 import sys
 
-from temporalio.client import Client
-
-from workflow import EstimateAge
 from shared import TASK_QUEUE_NAME, WORKFLOW_ID
+from temporalio.client import Client
+from workflow import EstimateAge
 
 
 async def main():

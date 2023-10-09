@@ -1,4 +1,3 @@
-import logging
 import asyncio
 from datetime import timedelta
 
@@ -8,12 +7,10 @@ from temporalio import workflow
 with workflow.unsafe.imports_passed_through():
     from activities import TranslationActivities
     from shared import (
+        TranslationActivityInput,
         TranslationWorkflowInput,
         TranslationWorkflowOutput,
-        TranslationActivityInput,
     )
-
-logging.basicConfig(level=logging.INFO)
 
 
 @workflow.defn

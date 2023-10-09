@@ -1,6 +1,4 @@
 from dataclasses import dataclass
-from typing import List
-
 
 TASK_QUEUE_NAME = "loan-processing-workflow-taskqueue"
 WORKFLOW_ID = "loan-processing-workflow-customer-"

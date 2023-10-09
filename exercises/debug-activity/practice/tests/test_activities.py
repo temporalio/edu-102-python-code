@@ -1,9 +1,7 @@
 import pytest
-
-from temporalio.testing import ActivityEnvironment
-
 from activities import PizzaOrderActivities
-from shared import Address, Distance, Bill
+from shared import Address, Bill, Distance
+from temporalio.testing import ActivityEnvironment
 
 
 @pytest.mark.asyncio

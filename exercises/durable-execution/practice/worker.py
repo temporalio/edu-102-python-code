@@ -1,15 +1,18 @@
 import asyncio
-import aiohttp
 
+import aiohttp
+from activities import TranslationActivities
+from shared import TASK_QUEUE_NAME
 from temporalio.client import Client
 from temporalio.worker import Worker
-
-from activities import TranslationActivities
 from workflow import TranslationWorkflow
-from shared import TASK_QUEUE_NAME
+
+# TODO Uncomment the import statement below
+# import logging
 
 
 async def main():
+    # TODO Setup logging config and set level to INFO
     client = await Client.connect("localhost:7233", namespace="default")
 
     # Run the worker
