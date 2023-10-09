@@ -102,7 +102,7 @@ following steps:
 There are two things to note about this test.
 
 First, the test completes in under a second, even though the Workflow 
-Definition contains a `workflow.Sleep` call that adds a 15-second delay 
+Definition contains a `await asyncio.sleep(15)` call that adds a 15-second delay 
 to the Workflow Execution. This is because of the time-skipping feature
 provided by the test environment.
 
