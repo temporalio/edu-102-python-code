@@ -19,7 +19,7 @@ class LoanProcessingWorkflow:
 
         is_patched = workflow.patched("moved-thank-you-after-loop")
 
-        if is_patched is False:
+        if not is_patched:
             confirmation = await workflow.execute_activity_method(
                 LoanProcessingActivities.send_thank_you_to_customer,
                 info,
