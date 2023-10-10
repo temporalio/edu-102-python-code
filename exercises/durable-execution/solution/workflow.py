@@ -33,7 +33,7 @@ class TranslationWorkflow:
         )
         hello_message = f"{hello_result.translation}, {input.name}"
 
-        workflow.logger.debug(f"sleeping between translation calls")
+        workflow.logger.debug("sleeping between translation calls")
         await asyncio.sleep(10)
 
         workflow.logger.debug(
