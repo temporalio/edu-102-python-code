@@ -22,7 +22,7 @@ class PizzaOrderWorkflow:
         for pizza in order.items:
             total_price += pizza.price
 
-        if order.is_delivery is False:
+        if not order.is_delivery:
             error_message = "delivery option not selected, terminating Workflow"
             workflow.logger.error(error_message)
             raise ApplicationError(error_message)
