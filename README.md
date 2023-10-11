@@ -27,6 +27,7 @@ The following links provide additional information that you may find helpful as 
 * [General Temporal Documentation](https://docs.temporal.io/)
 * [Temporal Python SDK Documentation](https://python.temporal.io/)
 * [Python Language Documentation](https://docs.python.org/3/)
+* [Python Packaging and Virtual Environment Documentation](https://packaging.python.org/en/latest/tutorials/installing-packages/#creating-virtual-environments)
 * [GitPod Documentation: Troubleshooting](https://www.gitpod.io/docs/troubleshooting)
 
 ### Setup Your Python Virtual Environment
