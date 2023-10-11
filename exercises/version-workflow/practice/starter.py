@@ -1,7 +1,7 @@
 import asyncio
 import sys
 
-from shared import TASK_QUEUE_NAME, WORKFLOW_ID, create_customer_info_db
+from shared import TASK_QUEUE_NAME, WORKFLOW_ID_PREFIX, create_customer_info_db
 from temporalio.client import Client
 from workflow import LoanProcessingWorkflow
 
@@ -20,7 +20,7 @@ async def main():
     handle = await client.start_workflow(
         LoanProcessingWorkflow.process_loan,
         info,
-        id=WORKFLOW_ID + info.customer_id,
+        id=WORKFLOW_ID_PREFIX + info.customer_id,
         task_queue=TASK_QUEUE_NAME,
     )
 

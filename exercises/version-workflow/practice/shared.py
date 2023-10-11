@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 TASK_QUEUE_NAME = "loan-processing-workflow-taskqueue"
-WORKFLOW_ID = "loan-processing-workflow-customer-"
+WORKFLOW_ID_PREFIX = "loan-processing-workflow-customer-"
 
 
 @dataclass

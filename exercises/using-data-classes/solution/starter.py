@@ -1,7 +1,7 @@
 import asyncio
 import sys
 
-from shared import TASK_QUEUE_NAME, WORKFLOW_ID, TranslationWorkflowInput
+from shared import TASK_QUEUE_NAME, TranslationWorkflowInput
 from temporalio.client import Client
 from workflow import TranslationWorkflow
 
@@ -14,7 +14,7 @@ async def main():
     handle = await client.start_workflow(
         TranslationWorkflow.run,
         TranslationWorkflowInput(name=sys.argv[1], language_code=sys.argv[2]),
-        id=WORKFLOW_ID,
+        id="translation-tasks-example",
         task_queue=TASK_QUEUE_NAME,
     )
 

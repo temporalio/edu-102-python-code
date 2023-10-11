@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 
 TASK_QUEUE_NAME = "translation-tasks"
-WORKFLOW_ID = "translation-tasks-example"
 
 
 @dataclass
