@@ -1,4 +1,5 @@
 import asyncio
+import logging
 import sys
 
 from shared import TASK_QUEUE_NAME, TranslationWorkflowInput
@@ -18,11 +19,13 @@ async def main():
         task_queue=TASK_QUEUE_NAME,
     )
 
-    print(f"Started workflow. Workflow ID: {handle.id}, RunID {handle.result_run_id}")
+    logging.info(
+        f"Started workflow. Workflow ID: {handle.id}, RunID {handle.result_run_id}"
+    )
 
     result = await handle.result()
 
-    print(f"Result: {result}")
+    logging.info(f"Result: {result}")
 
 
 if __name__ == "__main__":

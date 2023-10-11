@@ -20,7 +20,7 @@ async def main():
         workflows=[PizzaOrderWorkflow],
         activities=[activities.get_distance, activities.send_bill],
     )
-    print("Starting the worker....")
+    logging.info("Starting the worker....")
     await worker.run()
 
 

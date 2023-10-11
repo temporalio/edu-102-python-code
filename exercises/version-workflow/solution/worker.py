@@ -1,4 +1,5 @@
 import asyncio
+import logging
 
 from activities import LoanProcessingActivities
 from shared import TASK_QUEUE_NAME
@@ -20,7 +21,7 @@ async def main():
         workflows=[LoanProcessingWorkflow],
         activities=[activities.charge_customer, activities.send_thank_you_to_customer],
     )
-    print("Starting the worker....")
+    logging.info("Starting the worker....")
     await worker.run()
 
 

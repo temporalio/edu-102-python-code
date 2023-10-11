@@ -25,7 +25,7 @@ async def main():
             workflows=[TranslationWorkflow],
             activities=[activities.translate_term],
         )
-        print("Starting the worker....")
+        logging.info("Starting the worker....")
         await worker.run()
 
 
