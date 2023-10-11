@@ -1,12 +1,11 @@
 import pytest
 from activities import PizzaOrderActivities
-from shared import Address, Distance
+from shared import Address, Distance, PizzaOrder, create_pizza_order
 from temporalio import activity
 from temporalio.client import WorkflowFailureError
 from temporalio.exceptions import ApplicationError
 from temporalio.testing import WorkflowEnvironment
 from temporalio.worker import Worker
-from utils import create_pizza_order_for_test
 from workflow import PizzaOrderWorkflow
 
 
@@ -61,3 +60,9 @@ async def test_failed_pizza_order_outside_delivery_error():
                 )
         assert isinstance(e.value.cause, ApplicationError)
         assert "Customer lives outside the service area" == str(e.value.cause)
+
+
+def create_pizza_order_for_test() -> PizzaOrder:
+    pizza_order = create_pizza_order()
+    pizza_order.items = pizza_order.items[:-1]
+    return pizza_order
