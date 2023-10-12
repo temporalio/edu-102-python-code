@@ -45,7 +45,7 @@ Once you're ready to implement something similar for the Activity, continue with
 ## Part B: Use the Data Classes in Your Activity
 Now that you have defined the class, you must update the Activity code to use them.
 
-1. Edit the `activity.py` file
+1. Edit the `activities.py` file
 2. Replace the last two input parameters in the `translate_term` method with the Data Class you defined as input
 3. Replace the first type hint (`str`) in the `translate_term` method with the name of the Data Class you defined as output
 4. At the end of the method, create a `TranslationActivityOutput` object and populate its `translation` field with the `content` variable, which holds the translation returned in the microservice call.
