@@ -35,13 +35,14 @@ The following links provide additional information that you may find helpful as 
 All Python libraries for this course should be installed in a virtual environment.
 If you are running these exercises in the course's GitPod environment, there
 is a virtual environment already setup for you and you can skip this section.
+(Be certain that you are running Python 3.7+. If you system has)
 
 1. Open a terminal window in the environment and change directories to the root directory of the
 `edu-102-python-code` repository
 2. Run the following command to create a virtual environment
 
 ```
-$ python -m venv env
+$ python3 -m venv env
 ```
 
 3. Activate the virtual environment 
