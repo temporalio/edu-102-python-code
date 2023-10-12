@@ -82,7 +82,7 @@ Take a moment to study this code, and then continue with the
 following steps:
 
 1. Edit the `test_activities.py` file
-2. Copy the entire `test_failed_translate_acivity_bad_language_code` function
+2. Copy the entire `test_failed_translate_activity_bad_language_code` function
    provided above and paste it at the bottom of the `test_activities.py` file 
 4. Save the changes
 5. Run `python -m pytest` again to run this new test, in addition to the others
