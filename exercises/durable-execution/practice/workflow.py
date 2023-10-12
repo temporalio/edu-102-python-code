@@ -24,7 +24,7 @@ class TranslationWorkflow:
 
         # TODO Add a log message using the workflow logger at the debug level
         # stating that the Activity has been invoked. Include the term and
-        # language code
+        # language code.
         hello_result = await workflow.execute_activity_method(
             TranslationActivities.translate_term,
             hello_input,
@@ -38,7 +38,7 @@ class TranslationWorkflow:
         # TODO Add a Timer that sleeps for 10 seconds
 
         # TODO Add a log message using the workflow logger at the debug level
-        # stating that the Activity has been invoked. Include the term and language code
+        # stating that the Activity has been invoked. Include the term and language code.
         goodbye_input = TranslationActivityInput(
             language_code=input.language_code, term="goodbye"
         )
