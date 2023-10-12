@@ -83,7 +83,7 @@ course is activated as detailed in the course [README](../../README.md#setup-you
     although the Worker immediately begins using the updated code you deployed, 
     it may take up to 90 seconds before that is evident for this Workflow Execution,
     due to the duration of the Timer.
-5. Refresh the detail page for this execution in the Web UI. Continue to refresh 
+4. Refresh the detail page for this execution in the Web UI. Continue to refresh 
     the page until the non-deterministic error is visible.
 
 The non-deterministic error occurs because of your change to the 
@@ -110,7 +110,7 @@ and responds by throwing the non-deterministic error you see.
     (which should be `loan-processing-workflow-customer-a100`) and the JSON string
     of the event history
 2. Save your changes
-4. Run `python -m pytest`. You should find that this fails, which confirms 
+3. Run `python -m pytest`. You should find that this fails, which confirms 
    altering the execution order of the `send_thank_you_to_customer` 
    Activity) breaks compatibility. In the final part of this 
    exercise, you will use the `workflow.patched` API to implement 
@@ -135,21 +135,21 @@ by the user-defined Change ID `moved-thank-you-after-loop`.
    call there.  In other words, copy the same lines you moved after the loop to 
    inside the scope for this conditional statement, so that this Activity will be
    called if the condition evaluates to `False`.
-3. Wrap the code you previously moved after the loop in a
+2. Wrap the code you previously moved after the loop in a
    conditional statement that tests if `is_patched` is `True`. This will handle 
    the Activity for Workflow Executions started after the change.
-4. Change the duration of the `await asyncio.sleep()` statement at the
+3. Change the duration of the `await asyncio.sleep()` statement at the
    bottom of the loop back to 3 seconds. This is unrelated to
    versioning and changing the duration of a timer does not require versioning,
    gbut will help you see the results more quickly.
-5. Run `python -m pytest` again. You should find it succeeds this time,
+4. Run `python -m pytest` again. You should find it succeeds this time,
    since you've used the Patching API to restore compatibility with
    the previous execution.
-6. Restart the Worker by pressing Ctrl-C in the terminal
+5. Restart the Worker by pressing Ctrl-C in the terminal
    window where you started it and then running the `python worker.py` command again.
-7. Return to the detail page for this Workflow Execution
-8. You should see your Workflow detect the change and restart.
-9. You could also manually cancel and restart the Workflow, say if it was running
+6. Return to the detail page for this Workflow Execution
+7. You should see your Workflow detect the change and restart.
+8. You could also manually cancel and restart the Workflow, say if it was running
     on a long timer. To do this:
     * Click the downward-facing arrow to the right of the 
     **Request Cancellation** menu near the upper-right portion of 
