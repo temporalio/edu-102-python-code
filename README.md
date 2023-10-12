@@ -19,7 +19,7 @@ Directory Name                     | Exercise
 ## Examples for Self-Study
 Directory Name                         | Description
 :------------------------------------- | :----------------------------------------------------------------------------------
-`samples/age-estimation`               | [Calls a remote API to estimate a given name](samples/age-estimation)
+`samples/age-estimation`               | [Calls a remote API to estimate the age of a person given their name](samples/age-estimation)
 
 
 ## Reference
