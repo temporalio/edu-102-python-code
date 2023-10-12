@@ -23,6 +23,9 @@ class LoanProcessingWorkflow:
             start_to_close_timeout=timedelta(seconds=5),
         )
 
+        # TODO add the call to `workflow.patched here`
+        # TODO add the conditional statement to check if the Workflow patch is False
+        # and send the thank you
         total_paid = 0
         for period in range(1, info.number_of_periods + 1):
             charge_input = ChargeInput(
@@ -39,10 +42,13 @@ class LoanProcessingWorkflow:
             )
 
             total_paid += charge_input.amount
-            worker.logger.info(
+            workflow.logger.info(
                 f"payment complete for period {period} total paid: {charge_input.amount}"
             )
 
             await asyncio.sleep(3)
+
+        # TODO add the conditional statement to check if the Workflow patch is True
+        # and send the thank you
 
         return f"loan for customer {info.customer_id} has been full paid(total={total_paid})"
