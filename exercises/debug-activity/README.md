@@ -114,7 +114,7 @@ uses floating point numbers to represent currency.
 	* Price: 1300
 3. Add `pizza3` to the `pizza_list` list
 4. Save the changes and close the editor
-5. Submit this pizza order by starting the Workflow: `python start.py`
+5. Submit this pizza order by starting the Workflow: `python starter.py`
 
 Although the Workflow *should* complete within a few seconds, you will 
 probably find that it never does, so open the Web UI and look at the 
