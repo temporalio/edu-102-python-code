@@ -77,9 +77,8 @@ def create_pizza_order() -> PizzaOrder:
     )
     pizza1 = Pizza(description="Large, with mushrooms and onions", price=1500)
     pizza2 = Pizza(description="Small, with pepperoni", price=1200)
-    pizza3 = Pizza(description="Medium, with extra cheese", price=1300)
 
-    pizza_list = [pizza1, pizza2, pizza3]
+    pizza_list = [pizza1, pizza2]
 
     pizza_order = PizzaOrder(
         order_number="XD001",

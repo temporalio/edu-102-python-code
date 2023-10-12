@@ -103,9 +103,9 @@ Note that the code models prices in cents (for example, $27 is represented
 as 2700) in order to avoid the problems that occur when a computer program 
 uses floating point numbers to represent currency.
 
-1. Edit the `utils` file, which creates the input data and starts 
+1. Edit the `shared` file, which creates the input data and starts 
    the Workflow
-   * Lines 18-19 create and populate dataclass objects (`pizz1` and `pizza2`) 
+   * Lines 78-79 create and populate dataclass objects (`pizza1` and `pizza2`) 
    representing pizzas, which are then added to an array named `pizza_list` used 
    in the `PizzaOrder` dataclass used as input to the Workflow. 
 2. Create and populate another Pizza object, named `pizza3`, representing a third
