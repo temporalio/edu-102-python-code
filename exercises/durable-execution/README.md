@@ -35,7 +35,7 @@ course is activated as detailed in the course [README](../../README.md#setup-you
     1. It should mention that the Workflow method has been invoked
     2. It should also include the variables passes as input
 3. Before each call to `execute_activity_method`, log a message at Debug level
-    1. This should should identify the word being translated
+    1. This should identify the word being translated
     2. It should also include the language code passed as input
 4. Save your changes
 
