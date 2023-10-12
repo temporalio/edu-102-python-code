@@ -9,7 +9,7 @@ training course.
 
 Directory Name                     | Exercise
 :--------------------------------- | :-------------------------------------------------------
-`exercises/using-data-classes`     | [Exercise 1](exercises/using-classes/README.md)
+`exercises/using-data-classes`     | [Exercise 1](exercises/using-data-classes/README.md)
 `exercises/durable-execution`      | [Exercise 2](exercises/durable-execution/README.md)
 `exercises/testing-code`           | [Exercise 3](exercises/testing-code/README.md)
 `exercises/debug-activity`         | [Exercise 4](exercises/debug-activity/README.md)
