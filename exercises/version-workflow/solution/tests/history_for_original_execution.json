@@ -1,0 +1,2387 @@
+{
+  "events": [
+    {
+      "eventId": "1",
+      "eventTime": "2023-09-27T18:38:47.681417Z",
+      "eventType": "WorkflowExecutionStarted",
+      "version": "0",
+      "taskId": "1048587",
+      "workerMayIgnore": false,
+      "workflowExecutionStartedEventAttributes": {
+        "workflowType": {
+          "name": "LoanProcessingWorkflow"
+        },
+        "parentWorkflowNamespace": "",
+        "parentWorkflowNamespaceId": "",
+        "parentWorkflowExecution": null,
+        "parentInitiatedEventId": "0",
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwiZW1haWxfYWRkcmVzcyI6ImFuYUBleGFtcGxlLmNvbSIsIm5hbWUiOiJBbmEgR2FyY2lhIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwfQ=="
+            }
+          ]
+        },
+        "workflowExecutionTimeout": null,
+        "workflowRunTimeout": null,
+        "workflowTaskTimeout": "10s",
+        "continuedExecutionRunId": "",
+        "initiator": "Unspecified",
+        "continuedFailure": null,
+        "lastCompletionResult": null,
+        "originalExecutionRunId": "a456b814-d919-4489-b269-ca4006af4de2",
+        "identity": "94867@Masons-Laptop",
+        "firstExecutionRunId": "a456b814-d919-4489-b269-ca4006af4de2",
+        "retryPolicy": null,
+        "attempt": 1,
+        "workflowExecutionExpirationTime": null,
+        "cronSchedule": "",
+        "firstWorkflowTaskBackoff": "0s",
+        "memo": null,
+        "searchAttributes": null,
+        "prevAutoResetPoints": null,
+        "header": null,
+        "parentInitiatedEventVersion": "0"
+      }
+    },
+    {
+      "eventId": "2",
+      "eventTime": "2023-09-27T18:38:47.681446Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048588",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "3",
+      "eventTime": "2023-09-27T18:38:47.683665Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048593",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "2",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "02f78d62-a23b-4096-976f-31440c4ef7ef",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "418"
+      }
+    },
+    {
+      "eventId": "4",
+      "eventTime": "2023-09-27T18:38:47.686873Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048597",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "2",
+        "startedEventId": "3",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [
+            2,
+            1
+          ],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "5",
+      "eventTime": "2023-09-27T18:38:47.686919Z",
+      "eventType": "ActivityTaskScheduled",
+      "version": "0",
+      "taskId": "1048598",
+      "workerMayIgnore": false,
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "1",
+        "activityType": {
+          "name": "send_thank_you_to_customer"
+        },
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "header": {
+          "fields": {}
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwiZW1haWxfYWRkcmVzcyI6ImFuYUBleGFtcGxlLmNvbSIsIm5hbWUiOiJBbmEgR2FyY2lhIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwfQ=="
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "5s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "4",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 0,
+          "nonRetryableErrorTypes": []
+        }
+      }
+    },
+    {
+      "eventId": "6",
+      "eventTime": "2023-09-27T18:38:47.687678Z",
+      "eventType": "ActivityTaskStarted",
+      "version": "0",
+      "taskId": "1048603",
+      "workerMayIgnore": false,
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "5",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "d780389b-72d1-4762-ac64-6b083f6482d9",
+        "attempt": 1,
+        "lastFailure": null
+      }
+    },
+    {
+      "eventId": "7",
+      "eventTime": "2023-09-27T18:38:47.689277Z",
+      "eventType": "ActivityTaskCompleted",
+      "version": "0",
+      "taskId": "1048604",
+      "workerMayIgnore": false,
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IlNlbnQgdGhhbmsgeW91IG1lc3NhZ2UgdG8gY3VzdG9tZXIgYTEwMCI="
+            }
+          ]
+        },
+        "scheduledEventId": "5",
+        "startedEventId": "6",
+        "identity": "94814@Masons-Laptop"
+      }
+    },
+    {
+      "eventId": "8",
+      "eventTime": "2023-09-27T18:38:47.689280Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048605",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "9",
+      "eventTime": "2023-09-27T18:38:47.689882Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048609",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "8",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "8a978a2a-521a-448e-a90c-f5d7b3d6d5d2",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "1217"
+      }
+    },
+    {
+      "eventId": "10",
+      "eventTime": "2023-09-27T18:38:47.691355Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048613",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "8",
+        "startedEventId": "9",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "11",
+      "eventTime": "2023-09-27T18:38:47.691367Z",
+      "eventType": "ActivityTaskScheduled",
+      "version": "0",
+      "taskId": "1048614",
+      "workerMayIgnore": false,
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "2",
+        "activityType": {
+          "name": "charge_customer"
+        },
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "header": {
+          "fields": {}
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwLCJwZXJpb2RfbnVtYmVyIjoxfQ=="
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "5s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "10",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 0,
+          "nonRetryableErrorTypes": []
+        }
+      }
+    },
+    {
+      "eventId": "12",
+      "eventTime": "2023-09-27T18:38:47.692566Z",
+      "eventType": "ActivityTaskStarted",
+      "version": "0",
+      "taskId": "1048619",
+      "workerMayIgnore": false,
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "11",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "67369e28-d972-4ebf-9352-987f92390d91",
+        "attempt": 1,
+        "lastFailure": null
+      }
+    },
+    {
+      "eventId": "13",
+      "eventTime": "2023-09-27T18:38:47.693818Z",
+      "eventType": "ActivityTaskCompleted",
+      "version": "0",
+      "taskId": "1048620",
+      "workerMayIgnore": false,
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IkNoYXJnZWQgNTAwIHRvIGN1c3RvbWVyIGExMDAi"
+            }
+          ]
+        },
+        "scheduledEventId": "11",
+        "startedEventId": "12",
+        "identity": "94814@Masons-Laptop"
+      }
+    },
+    {
+      "eventId": "14",
+      "eventTime": "2023-09-27T18:38:47.693821Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048621",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "15",
+      "eventTime": "2023-09-27T18:38:47.694455Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048625",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "14",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "b356b980-f9c8-4f0d-96c0-8e0a5ccd909b",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "1952"
+      }
+    },
+    {
+      "eventId": "16",
+      "eventTime": "2023-09-27T18:38:47.695898Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048629",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "14",
+        "startedEventId": "15",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "17",
+      "eventTime": "2023-09-27T18:38:47.695914Z",
+      "eventType": "TimerStarted",
+      "version": "0",
+      "taskId": "1048630",
+      "workerMayIgnore": false,
+      "timerStartedEventAttributes": {
+        "timerId": "1",
+        "startToFireTimeout": "3s",
+        "workflowTaskCompletedEventId": "16"
+      }
+    },
+    {
+      "eventId": "18",
+      "eventTime": "2023-09-27T18:38:50.697735Z",
+      "eventType": "TimerFired",
+      "version": "0",
+      "taskId": "1048633",
+      "workerMayIgnore": false,
+      "timerFiredEventAttributes": {
+        "timerId": "1",
+        "startedEventId": "17"
+      }
+    },
+    {
+      "eventId": "19",
+      "eventTime": "2023-09-27T18:38:50.697741Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048634",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "20",
+      "eventTime": "2023-09-27T18:38:50.699436Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048638",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "19",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "3908d029-0d4e-4c6f-82a9-8455108bdb64",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "2324"
+      }
+    },
+    {
+      "eventId": "21",
+      "eventTime": "2023-09-27T18:38:50.702531Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048642",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "19",
+        "startedEventId": "20",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "22",
+      "eventTime": "2023-09-27T18:38:50.702553Z",
+      "eventType": "ActivityTaskScheduled",
+      "version": "0",
+      "taskId": "1048643",
+      "workerMayIgnore": false,
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "3",
+        "activityType": {
+          "name": "charge_customer"
+        },
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "header": {
+          "fields": {}
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwLCJwZXJpb2RfbnVtYmVyIjoyfQ=="
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "5s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "21",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 0,
+          "nonRetryableErrorTypes": []
+        }
+      }
+    },
+    {
+      "eventId": "23",
+      "eventTime": "2023-09-27T18:38:50.703738Z",
+      "eventType": "ActivityTaskStarted",
+      "version": "0",
+      "taskId": "1048648",
+      "workerMayIgnore": false,
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "22",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "fe7865d3-1f65-448a-91e1-3904b59cc1e2",
+        "attempt": 1,
+        "lastFailure": null
+      }
+    },
+    {
+      "eventId": "24",
+      "eventTime": "2023-09-27T18:38:50.705781Z",
+      "eventType": "ActivityTaskCompleted",
+      "version": "0",
+      "taskId": "1048649",
+      "workerMayIgnore": false,
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IkNoYXJnZWQgNTAwIHRvIGN1c3RvbWVyIGExMDAi"
+            }
+          ]
+        },
+        "scheduledEventId": "22",
+        "startedEventId": "23",
+        "identity": "94814@Masons-Laptop"
+      }
+    },
+    {
+      "eventId": "25",
+      "eventTime": "2023-09-27T18:38:50.705786Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048650",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "26",
+      "eventTime": "2023-09-27T18:38:50.706830Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048654",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "25",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "c78b5a47-5b7a-42be-8ec9-e1d25eaf1784",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "3059"
+      }
+    },
+    {
+      "eventId": "27",
+      "eventTime": "2023-09-27T18:38:50.708950Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048658",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "25",
+        "startedEventId": "26",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "28",
+      "eventTime": "2023-09-27T18:38:50.708957Z",
+      "eventType": "TimerStarted",
+      "version": "0",
+      "taskId": "1048659",
+      "workerMayIgnore": false,
+      "timerStartedEventAttributes": {
+        "timerId": "2",
+        "startToFireTimeout": "3s",
+        "workflowTaskCompletedEventId": "27"
+      }
+    },
+    {
+      "eventId": "29",
+      "eventTime": "2023-09-27T18:38:53.711345Z",
+      "eventType": "TimerFired",
+      "version": "0",
+      "taskId": "1048662",
+      "workerMayIgnore": false,
+      "timerFiredEventAttributes": {
+        "timerId": "2",
+        "startedEventId": "28"
+      }
+    },
+    {
+      "eventId": "30",
+      "eventTime": "2023-09-27T18:38:53.711359Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048663",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "31",
+      "eventTime": "2023-09-27T18:38:53.714863Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048667",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "30",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "ab53239c-7dc2-40ac-b54a-4a344a7ef45b",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "3431"
+      }
+    },
+    {
+      "eventId": "32",
+      "eventTime": "2023-09-27T18:38:53.721587Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048671",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "30",
+        "startedEventId": "31",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "33",
+      "eventTime": "2023-09-27T18:38:53.721639Z",
+      "eventType": "ActivityTaskScheduled",
+      "version": "0",
+      "taskId": "1048672",
+      "workerMayIgnore": false,
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "4",
+        "activityType": {
+          "name": "charge_customer"
+        },
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "header": {
+          "fields": {}
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwLCJwZXJpb2RfbnVtYmVyIjozfQ=="
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "5s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "32",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 0,
+          "nonRetryableErrorTypes": []
+        }
+      }
+    },
+    {
+      "eventId": "34",
+      "eventTime": "2023-09-27T18:38:53.723892Z",
+      "eventType": "ActivityTaskStarted",
+      "version": "0",
+      "taskId": "1048677",
+      "workerMayIgnore": false,
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "33",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "b0d713fc-2050-4e16-8fa0-d7387c4ae333",
+        "attempt": 1,
+        "lastFailure": null
+      }
+    },
+    {
+      "eventId": "35",
+      "eventTime": "2023-09-27T18:38:53.727286Z",
+      "eventType": "ActivityTaskCompleted",
+      "version": "0",
+      "taskId": "1048678",
+      "workerMayIgnore": false,
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IkNoYXJnZWQgNTAwIHRvIGN1c3RvbWVyIGExMDAi"
+            }
+          ]
+        },
+        "scheduledEventId": "33",
+        "startedEventId": "34",
+        "identity": "94814@Masons-Laptop"
+      }
+    },
+    {
+      "eventId": "36",
+      "eventTime": "2023-09-27T18:38:53.727294Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048679",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "37",
+      "eventTime": "2023-09-27T18:38:53.729495Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048683",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "36",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "e5915457-cb3d-4c21-982c-8d660e16dd27",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "4166"
+      }
+    },
+    {
+      "eventId": "38",
+      "eventTime": "2023-09-27T18:38:53.733567Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048687",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "36",
+        "startedEventId": "37",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "39",
+      "eventTime": "2023-09-27T18:38:53.733581Z",
+      "eventType": "TimerStarted",
+      "version": "0",
+      "taskId": "1048688",
+      "workerMayIgnore": false,
+      "timerStartedEventAttributes": {
+        "timerId": "3",
+        "startToFireTimeout": "3s",
+        "workflowTaskCompletedEventId": "38"
+      }
+    },
+    {
+      "eventId": "40",
+      "eventTime": "2023-09-27T18:38:56.735574Z",
+      "eventType": "TimerFired",
+      "version": "0",
+      "taskId": "1048691",
+      "workerMayIgnore": false,
+      "timerFiredEventAttributes": {
+        "timerId": "3",
+        "startedEventId": "39"
+      }
+    },
+    {
+      "eventId": "41",
+      "eventTime": "2023-09-27T18:38:56.735587Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048692",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "42",
+      "eventTime": "2023-09-27T18:38:56.738893Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048696",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "41",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "9614f291-31a0-4f57-a97f-9b78a9f6db8b",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "4538"
+      }
+    },
+    {
+      "eventId": "43",
+      "eventTime": "2023-09-27T18:38:56.748047Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048700",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "41",
+        "startedEventId": "42",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "44",
+      "eventTime": "2023-09-27T18:38:56.748093Z",
+      "eventType": "ActivityTaskScheduled",
+      "version": "0",
+      "taskId": "1048701",
+      "workerMayIgnore": false,
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "5",
+        "activityType": {
+          "name": "charge_customer"
+        },
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "header": {
+          "fields": {}
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwLCJwZXJpb2RfbnVtYmVyIjo0fQ=="
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "5s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "43",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 0,
+          "nonRetryableErrorTypes": []
+        }
+      }
+    },
+    {
+      "eventId": "45",
+      "eventTime": "2023-09-27T18:38:56.751259Z",
+      "eventType": "ActivityTaskStarted",
+      "version": "0",
+      "taskId": "1048706",
+      "workerMayIgnore": false,
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "44",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "f6aa870b-98e0-4a7d-9a2c-05708eacbbe2",
+        "attempt": 1,
+        "lastFailure": null
+      }
+    },
+    {
+      "eventId": "46",
+      "eventTime": "2023-09-27T18:38:56.755288Z",
+      "eventType": "ActivityTaskCompleted",
+      "version": "0",
+      "taskId": "1048707",
+      "workerMayIgnore": false,
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IkNoYXJnZWQgNTAwIHRvIGN1c3RvbWVyIGExMDAi"
+            }
+          ]
+        },
+        "scheduledEventId": "44",
+        "startedEventId": "45",
+        "identity": "94814@Masons-Laptop"
+      }
+    },
+    {
+      "eventId": "47",
+      "eventTime": "2023-09-27T18:38:56.755298Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048708",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "48",
+      "eventTime": "2023-09-27T18:38:56.757190Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048712",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "47",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "e7d12e0b-12e5-4cd4-bc8f-1d8abe8528eb",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "5273"
+      }
+    },
+    {
+      "eventId": "49",
+      "eventTime": "2023-09-27T18:38:56.761325Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048716",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "47",
+        "startedEventId": "48",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "50",
+      "eventTime": "2023-09-27T18:38:56.761340Z",
+      "eventType": "TimerStarted",
+      "version": "0",
+      "taskId": "1048717",
+      "workerMayIgnore": false,
+      "timerStartedEventAttributes": {
+        "timerId": "4",
+        "startToFireTimeout": "3s",
+        "workflowTaskCompletedEventId": "49"
+      }
+    },
+    {
+      "eventId": "51",
+      "eventTime": "2023-09-27T18:38:59.763356Z",
+      "eventType": "TimerFired",
+      "version": "0",
+      "taskId": "1048720",
+      "workerMayIgnore": false,
+      "timerFiredEventAttributes": {
+        "timerId": "4",
+        "startedEventId": "50"
+      }
+    },
+    {
+      "eventId": "52",
+      "eventTime": "2023-09-27T18:38:59.763367Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048721",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "53",
+      "eventTime": "2023-09-27T18:38:59.765790Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048725",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "52",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "fe578ac7-cbe4-438a-ac8d-5c3376160db7",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "5645"
+      }
+    },
+    {
+      "eventId": "54",
+      "eventTime": "2023-09-27T18:38:59.771953Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048729",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "52",
+        "startedEventId": "53",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "55",
+      "eventTime": "2023-09-27T18:38:59.772001Z",
+      "eventType": "ActivityTaskScheduled",
+      "version": "0",
+      "taskId": "1048730",
+      "workerMayIgnore": false,
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "6",
+        "activityType": {
+          "name": "charge_customer"
+        },
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "header": {
+          "fields": {}
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwLCJwZXJpb2RfbnVtYmVyIjo1fQ=="
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "5s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "54",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 0,
+          "nonRetryableErrorTypes": []
+        }
+      }
+    },
+    {
+      "eventId": "56",
+      "eventTime": "2023-09-27T18:38:59.774563Z",
+      "eventType": "ActivityTaskStarted",
+      "version": "0",
+      "taskId": "1048735",
+      "workerMayIgnore": false,
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "55",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "25c922f5-2b57-423a-9a53-ac4a77c914d2",
+        "attempt": 1,
+        "lastFailure": null
+      }
+    },
+    {
+      "eventId": "57",
+      "eventTime": "2023-09-27T18:38:59.780105Z",
+      "eventType": "ActivityTaskCompleted",
+      "version": "0",
+      "taskId": "1048736",
+      "workerMayIgnore": false,
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IkNoYXJnZWQgNTAwIHRvIGN1c3RvbWVyIGExMDAi"
+            }
+          ]
+        },
+        "scheduledEventId": "55",
+        "startedEventId": "56",
+        "identity": "94814@Masons-Laptop"
+      }
+    },
+    {
+      "eventId": "58",
+      "eventTime": "2023-09-27T18:38:59.780114Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048737",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "59",
+      "eventTime": "2023-09-27T18:38:59.782720Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048741",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "58",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "826af9f4-12ad-4f56-a656-eadbf5a6d2a4",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "6380"
+      }
+    },
+    {
+      "eventId": "60",
+      "eventTime": "2023-09-27T18:38:59.786493Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048745",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "58",
+        "startedEventId": "59",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "61",
+      "eventTime": "2023-09-27T18:38:59.786507Z",
+      "eventType": "TimerStarted",
+      "version": "0",
+      "taskId": "1048746",
+      "workerMayIgnore": false,
+      "timerStartedEventAttributes": {
+        "timerId": "5",
+        "startToFireTimeout": "3s",
+        "workflowTaskCompletedEventId": "60"
+      }
+    },
+    {
+      "eventId": "62",
+      "eventTime": "2023-09-27T18:39:02.789111Z",
+      "eventType": "TimerFired",
+      "version": "0",
+      "taskId": "1048749",
+      "workerMayIgnore": false,
+      "timerFiredEventAttributes": {
+        "timerId": "5",
+        "startedEventId": "61"
+      }
+    },
+    {
+      "eventId": "63",
+      "eventTime": "2023-09-27T18:39:02.789126Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048750",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "64",
+      "eventTime": "2023-09-27T18:39:02.792482Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048754",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "63",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "36817b97-4c5e-4bb3-b55d-fa933c7701bf",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "6752"
+      }
+    },
+    {
+      "eventId": "65",
+      "eventTime": "2023-09-27T18:39:02.798678Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048758",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "63",
+        "startedEventId": "64",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "66",
+      "eventTime": "2023-09-27T18:39:02.798733Z",
+      "eventType": "ActivityTaskScheduled",
+      "version": "0",
+      "taskId": "1048759",
+      "workerMayIgnore": false,
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "7",
+        "activityType": {
+          "name": "charge_customer"
+        },
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "header": {
+          "fields": {}
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwLCJwZXJpb2RfbnVtYmVyIjo2fQ=="
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "5s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "65",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 0,
+          "nonRetryableErrorTypes": []
+        }
+      }
+    },
+    {
+      "eventId": "67",
+      "eventTime": "2023-09-27T18:39:02.800995Z",
+      "eventType": "ActivityTaskStarted",
+      "version": "0",
+      "taskId": "1048764",
+      "workerMayIgnore": false,
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "66",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "99b5f381-0554-466f-93ba-ff3571bd1eef",
+        "attempt": 1,
+        "lastFailure": null
+      }
+    },
+    {
+      "eventId": "68",
+      "eventTime": "2023-09-27T18:39:02.805105Z",
+      "eventType": "ActivityTaskCompleted",
+      "version": "0",
+      "taskId": "1048765",
+      "workerMayIgnore": false,
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IkNoYXJnZWQgNTAwIHRvIGN1c3RvbWVyIGExMDAi"
+            }
+          ]
+        },
+        "scheduledEventId": "66",
+        "startedEventId": "67",
+        "identity": "94814@Masons-Laptop"
+      }
+    },
+    {
+      "eventId": "69",
+      "eventTime": "2023-09-27T18:39:02.805112Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048766",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "70",
+      "eventTime": "2023-09-27T18:39:02.806945Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048770",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "69",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "118437c9-1d73-4b4c-acec-f8f26d8d8459",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "7487"
+      }
+    },
+    {
+      "eventId": "71",
+      "eventTime": "2023-09-27T18:39:02.810130Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048774",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "69",
+        "startedEventId": "70",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "72",
+      "eventTime": "2023-09-27T18:39:02.810142Z",
+      "eventType": "TimerStarted",
+      "version": "0",
+      "taskId": "1048775",
+      "workerMayIgnore": false,
+      "timerStartedEventAttributes": {
+        "timerId": "6",
+        "startToFireTimeout": "3s",
+        "workflowTaskCompletedEventId": "71"
+      }
+    },
+    {
+      "eventId": "73",
+      "eventTime": "2023-09-27T18:39:05.812671Z",
+      "eventType": "TimerFired",
+      "version": "0",
+      "taskId": "1048778",
+      "workerMayIgnore": false,
+      "timerFiredEventAttributes": {
+        "timerId": "6",
+        "startedEventId": "72"
+      }
+    },
+    {
+      "eventId": "74",
+      "eventTime": "2023-09-27T18:39:05.812684Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048779",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "75",
+      "eventTime": "2023-09-27T18:39:05.816400Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048783",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "74",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "911e84fe-5c7b-47a2-a25e-e790f914fa92",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "7859"
+      }
+    },
+    {
+      "eventId": "76",
+      "eventTime": "2023-09-27T18:39:05.822537Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048787",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "74",
+        "startedEventId": "75",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "77",
+      "eventTime": "2023-09-27T18:39:05.822597Z",
+      "eventType": "ActivityTaskScheduled",
+      "version": "0",
+      "taskId": "1048788",
+      "workerMayIgnore": false,
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "8",
+        "activityType": {
+          "name": "charge_customer"
+        },
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "header": {
+          "fields": {}
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwLCJwZXJpb2RfbnVtYmVyIjo3fQ=="
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "5s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "76",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 0,
+          "nonRetryableErrorTypes": []
+        }
+      }
+    },
+    {
+      "eventId": "78",
+      "eventTime": "2023-09-27T18:39:05.824765Z",
+      "eventType": "ActivityTaskStarted",
+      "version": "0",
+      "taskId": "1048793",
+      "workerMayIgnore": false,
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "77",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "ef84afd3-ae41-473f-a365-1f549ae86844",
+        "attempt": 1,
+        "lastFailure": null
+      }
+    },
+    {
+      "eventId": "79",
+      "eventTime": "2023-09-27T18:39:05.829518Z",
+      "eventType": "ActivityTaskCompleted",
+      "version": "0",
+      "taskId": "1048794",
+      "workerMayIgnore": false,
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IkNoYXJnZWQgNTAwIHRvIGN1c3RvbWVyIGExMDAi"
+            }
+          ]
+        },
+        "scheduledEventId": "77",
+        "startedEventId": "78",
+        "identity": "94814@Masons-Laptop"
+      }
+    },
+    {
+      "eventId": "80",
+      "eventTime": "2023-09-27T18:39:05.829525Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048795",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "81",
+      "eventTime": "2023-09-27T18:39:05.831365Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048799",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "80",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "3a462a01-8a5f-4f6e-b06b-caf5bfeff638",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "8594"
+      }
+    },
+    {
+      "eventId": "82",
+      "eventTime": "2023-09-27T18:39:05.836241Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048803",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "80",
+        "startedEventId": "81",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "83",
+      "eventTime": "2023-09-27T18:39:05.836254Z",
+      "eventType": "TimerStarted",
+      "version": "0",
+      "taskId": "1048804",
+      "workerMayIgnore": false,
+      "timerStartedEventAttributes": {
+        "timerId": "7",
+        "startToFireTimeout": "3s",
+        "workflowTaskCompletedEventId": "82"
+      }
+    },
+    {
+      "eventId": "84",
+      "eventTime": "2023-09-27T18:39:08.838195Z",
+      "eventType": "TimerFired",
+      "version": "0",
+      "taskId": "1048807",
+      "workerMayIgnore": false,
+      "timerFiredEventAttributes": {
+        "timerId": "7",
+        "startedEventId": "83"
+      }
+    },
+    {
+      "eventId": "85",
+      "eventTime": "2023-09-27T18:39:08.838204Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048808",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "86",
+      "eventTime": "2023-09-27T18:39:08.840178Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048812",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "85",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "da5fa419-5615-46ba-be69-b1bf95c27245",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "8966"
+      }
+    },
+    {
+      "eventId": "87",
+      "eventTime": "2023-09-27T18:39:08.855901Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048816",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "85",
+        "startedEventId": "86",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "88",
+      "eventTime": "2023-09-27T18:39:08.855934Z",
+      "eventType": "ActivityTaskScheduled",
+      "version": "0",
+      "taskId": "1048817",
+      "workerMayIgnore": false,
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "9",
+        "activityType": {
+          "name": "charge_customer"
+        },
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "header": {
+          "fields": {}
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwLCJwZXJpb2RfbnVtYmVyIjo4fQ=="
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "5s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "87",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 0,
+          "nonRetryableErrorTypes": []
+        }
+      }
+    },
+    {
+      "eventId": "89",
+      "eventTime": "2023-09-27T18:39:08.857790Z",
+      "eventType": "ActivityTaskStarted",
+      "version": "0",
+      "taskId": "1048822",
+      "workerMayIgnore": false,
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "88",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "8a67b5c9-041f-406e-abb6-0ee3852f6015",
+        "attempt": 1,
+        "lastFailure": null
+      }
+    },
+    {
+      "eventId": "90",
+      "eventTime": "2023-09-27T18:39:08.859998Z",
+      "eventType": "ActivityTaskCompleted",
+      "version": "0",
+      "taskId": "1048823",
+      "workerMayIgnore": false,
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IkNoYXJnZWQgNTAwIHRvIGN1c3RvbWVyIGExMDAi"
+            }
+          ]
+        },
+        "scheduledEventId": "88",
+        "startedEventId": "89",
+        "identity": "94814@Masons-Laptop"
+      }
+    },
+    {
+      "eventId": "91",
+      "eventTime": "2023-09-27T18:39:08.860004Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048824",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "92",
+      "eventTime": "2023-09-27T18:39:08.861231Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048828",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "91",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "d4ec53ef-eedb-49de-84f5-0ac84e16a691",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "9701"
+      }
+    },
+    {
+      "eventId": "93",
+      "eventTime": "2023-09-27T18:39:08.863393Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048832",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "91",
+        "startedEventId": "92",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "94",
+      "eventTime": "2023-09-27T18:39:08.863402Z",
+      "eventType": "TimerStarted",
+      "version": "0",
+      "taskId": "1048833",
+      "workerMayIgnore": false,
+      "timerStartedEventAttributes": {
+        "timerId": "8",
+        "startToFireTimeout": "3s",
+        "workflowTaskCompletedEventId": "93"
+      }
+    },
+    {
+      "eventId": "95",
+      "eventTime": "2023-09-27T18:39:11.865995Z",
+      "eventType": "TimerFired",
+      "version": "0",
+      "taskId": "1048836",
+      "workerMayIgnore": false,
+      "timerFiredEventAttributes": {
+        "timerId": "8",
+        "startedEventId": "94"
+      }
+    },
+    {
+      "eventId": "96",
+      "eventTime": "2023-09-27T18:39:11.866009Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048837",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "97",
+      "eventTime": "2023-09-27T18:39:11.869086Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048841",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "96",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "eaa5dda2-cd20-4849-986e-945cdb1ffc26",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "10073"
+      }
+    },
+    {
+      "eventId": "98",
+      "eventTime": "2023-09-27T18:39:11.873819Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048845",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "96",
+        "startedEventId": "97",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "99",
+      "eventTime": "2023-09-27T18:39:11.873888Z",
+      "eventType": "ActivityTaskScheduled",
+      "version": "0",
+      "taskId": "1048846",
+      "workerMayIgnore": false,
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "10",
+        "activityType": {
+          "name": "charge_customer"
+        },
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "header": {
+          "fields": {}
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwLCJwZXJpb2RfbnVtYmVyIjo5fQ=="
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "5s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "98",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 0,
+          "nonRetryableErrorTypes": []
+        }
+      }
+    },
+    {
+      "eventId": "100",
+      "eventTime": "2023-09-27T18:39:11.875863Z",
+      "eventType": "ActivityTaskStarted",
+      "version": "0",
+      "taskId": "1048851",
+      "workerMayIgnore": false,
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "99",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "f798e8c3-14b4-489f-9aea-7e3fc93ffcbb",
+        "attempt": 1,
+        "lastFailure": null
+      }
+    },
+    {
+      "eventId": "101",
+      "eventTime": "2023-09-27T18:39:11.879670Z",
+      "eventType": "ActivityTaskCompleted",
+      "version": "0",
+      "taskId": "1048852",
+      "workerMayIgnore": false,
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IkNoYXJnZWQgNTAwIHRvIGN1c3RvbWVyIGExMDAi"
+            }
+          ]
+        },
+        "scheduledEventId": "99",
+        "startedEventId": "100",
+        "identity": "94814@Masons-Laptop"
+      }
+    },
+    {
+      "eventId": "102",
+      "eventTime": "2023-09-27T18:39:11.879681Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048853",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "103",
+      "eventTime": "2023-09-27T18:39:11.881512Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048857",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "102",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "ffde5948-2fce-44fa-89a0-2a8ee5a9cefe",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "10809"
+      }
+    },
+    {
+      "eventId": "104",
+      "eventTime": "2023-09-27T18:39:11.885314Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048861",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "102",
+        "startedEventId": "103",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "105",
+      "eventTime": "2023-09-27T18:39:11.885327Z",
+      "eventType": "TimerStarted",
+      "version": "0",
+      "taskId": "1048862",
+      "workerMayIgnore": false,
+      "timerStartedEventAttributes": {
+        "timerId": "9",
+        "startToFireTimeout": "3s",
+        "workflowTaskCompletedEventId": "104"
+      }
+    },
+    {
+      "eventId": "106",
+      "eventTime": "2023-09-27T18:39:14.886588Z",
+      "eventType": "TimerFired",
+      "version": "0",
+      "taskId": "1048865",
+      "workerMayIgnore": false,
+      "timerFiredEventAttributes": {
+        "timerId": "9",
+        "startedEventId": "105"
+      }
+    },
+    {
+      "eventId": "107",
+      "eventTime": "2023-09-27T18:39:14.886599Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048866",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "108",
+      "eventTime": "2023-09-27T18:39:14.889834Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048870",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "107",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "502a7d54-6c0b-4def-877f-5fc94ae563bc",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "11181"
+      }
+    },
+    {
+      "eventId": "109",
+      "eventTime": "2023-09-27T18:39:14.894893Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048874",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "107",
+        "startedEventId": "108",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "110",
+      "eventTime": "2023-09-27T18:39:14.894933Z",
+      "eventType": "ActivityTaskScheduled",
+      "version": "0",
+      "taskId": "1048875",
+      "workerMayIgnore": false,
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "11",
+        "activityType": {
+          "name": "charge_customer"
+        },
+        "taskQueue": {
+          "name": "loan-processing-workflow-taskqueue",
+          "kind": "Normal"
+        },
+        "header": {
+          "fields": {}
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "eyJhbW91bnQiOjUwMCwiY3VzdG9tZXJfaWQiOiJhMTAwIiwibnVtYmVyX29mX3BlcmlvZHMiOjEwLCJwZXJpb2RfbnVtYmVyIjoxMH0="
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "5s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "109",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 0,
+          "nonRetryableErrorTypes": []
+        }
+      }
+    },
+    {
+      "eventId": "111",
+      "eventTime": "2023-09-27T18:39:14.896718Z",
+      "eventType": "ActivityTaskStarted",
+      "version": "0",
+      "taskId": "1048880",
+      "workerMayIgnore": false,
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "110",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "c85ff079-7094-4b8a-9068-d30652efb140",
+        "attempt": 1,
+        "lastFailure": null
+      }
+    },
+    {
+      "eventId": "112",
+      "eventTime": "2023-09-27T18:39:14.900070Z",
+      "eventType": "ActivityTaskCompleted",
+      "version": "0",
+      "taskId": "1048881",
+      "workerMayIgnore": false,
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IkNoYXJnZWQgNTAwIHRvIGN1c3RvbWVyIGExMDAi"
+            }
+          ]
+        },
+        "scheduledEventId": "110",
+        "startedEventId": "111",
+        "identity": "94814@Masons-Laptop"
+      }
+    },
+    {
+      "eventId": "113",
+      "eventTime": "2023-09-27T18:39:14.900078Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048882",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "114",
+      "eventTime": "2023-09-27T18:39:14.902827Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048886",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "113",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "8cc53ee8-d943-4e13-8b32-e662d8252951",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "11918"
+      }
+    },
+    {
+      "eventId": "115",
+      "eventTime": "2023-09-27T18:39:14.906974Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048890",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "113",
+        "startedEventId": "114",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "116",
+      "eventTime": "2023-09-27T18:39:14.906987Z",
+      "eventType": "TimerStarted",
+      "version": "0",
+      "taskId": "1048891",
+      "workerMayIgnore": false,
+      "timerStartedEventAttributes": {
+        "timerId": "10",
+        "startToFireTimeout": "3s",
+        "workflowTaskCompletedEventId": "115"
+      }
+    },
+    {
+      "eventId": "117",
+      "eventTime": "2023-09-27T18:39:17.908722Z",
+      "eventType": "TimerFired",
+      "version": "0",
+      "taskId": "1048894",
+      "workerMayIgnore": false,
+      "timerFiredEventAttributes": {
+        "timerId": "10",
+        "startedEventId": "116"
+      }
+    },
+    {
+      "eventId": "118",
+      "eventTime": "2023-09-27T18:39:17.908730Z",
+      "eventType": "WorkflowTaskScheduled",
+      "version": "0",
+      "taskId": "1048895",
+      "workerMayIgnore": false,
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "94814@Masons-Laptop-loan-processing-workflow-taskqueue-ebc0715e5f88496a925864e9038fa180",
+          "kind": "Sticky"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "119",
+      "eventTime": "2023-09-27T18:39:17.910810Z",
+      "eventType": "WorkflowTaskStarted",
+      "version": "0",
+      "taskId": "1048899",
+      "workerMayIgnore": false,
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "118",
+        "identity": "94814@Masons-Laptop",
+        "requestId": "4617f539-2eb2-4b87-b52b-83017dcae756",
+        "suggestContinueAsNew": false,
+        "historySizeBytes": "12292"
+      }
+    },
+    {
+      "eventId": "120",
+      "eventTime": "2023-09-27T18:39:17.915627Z",
+      "eventType": "WorkflowTaskCompleted",
+      "version": "0",
+      "taskId": "1048903",
+      "workerMayIgnore": false,
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "118",
+        "startedEventId": "119",
+        "identity": "94814@Masons-Laptop",
+        "binaryChecksum": "f8c7b42d84468008caa5f5fa95bf452c",
+        "workerVersioningId": null,
+        "sdkMetadata": {
+          "coreUsedFlags": [],
+          "langUsedFlags": []
+        },
+        "meteringMetadata": {
+          "nonfirstLocalActivityExecutionAttempts": 0
+        }
+      }
+    },
+    {
+      "eventId": "121",
+      "eventTime": "2023-09-27T18:39:17.915732Z",
+      "eventType": "WorkflowExecutionCompleted",
+      "version": "0",
+      "taskId": "1048904",
+      "workerMayIgnore": false,
+      "workflowExecutionCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "anNvbi9wbGFpbg=="
+              },
+              "data": "IkxvYW4gZm9yIGN1c3RvbWVyIGExMDAgaGFzIGJlZW4gZnVsbCBwYWlkKHRvdGFsPTUwMDApIg=="
+            }
+          ]
+        },
+        "workflowTaskCompletedEventId": "120",
+        "newExecutionRunId": ""
+      }
+    }
+  ]
+}
