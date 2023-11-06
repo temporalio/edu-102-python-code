@@ -1,8 +1,6 @@
 from dataclasses import dataclass
 from typing import List
 
-from shared import Address, Customer, Pizza, PizzaOrder
-
 TASK_QUEUE_NAME = "pizza-tasks"
 WORKFLOW_ID_PREFIX = "pizza-workflow-order-"
 
