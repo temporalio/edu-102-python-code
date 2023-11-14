@@ -15,10 +15,10 @@ training course.
 
 ## Examples for Self-Study
 
-| Directory Name                        | Description                                                                                           |
-| :------------------------------------ | :---------------------------------------------------------------------------------------------------- |
-| `samples/age-estimation`              | [Calls a remote API to estimate the age of a person given their name](samples/age-estimation)         |
-| `samples/using-data-classes-as-input` | [Demonstrate how data classes are passed in as input and output](samples/using-data-classes-as-input) |
+| Directory Name                                  | Description                                                                                                     |
+| :---------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
+| `samples/age-estimation`                        | [Calls a remote API to estimate the age of a person given their name](samples/age-estimation)                   |
+| `samples/using-dataclasses-as-input-and-output` | [Demonstrate how data classes are passed in as input and output](samples/using-dataclasses-as-input-and-output) |
 
 ## Reference
 
