@@ -20,18 +20,13 @@ class PizzaOrderWorkflow:
 
         total_price = sum(pizza.price for pizza in order.items)
 
-        if order.is_delivery is False:
-            error_message = "delivery option not selected, terminating Workflow"
-            workflow.logger.error(error_message)
-            raise ApplicationError(error_message)
-
         distance = await workflow.execute_activity_method(
             PizzaOrderActivities.get_distance,
             address,
             start_to_close_timeout=timedelta(seconds=5),
         )
 
-        if distance.kilometers > 25:
+        if order.is_delivery and distance.kilometers > 25:
             error_message = "customer lives outside the service area"
             workflow.logger.error(error_message)
             raise ApplicationError(error_message)
