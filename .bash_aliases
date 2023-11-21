@@ -1,6 +1,4 @@
 alias workspace="cd ${GITPOD_REPO_ROOT}"
-alias temporal="/workspace/bin/temporal"
-alias tctl="/workspace/bin/tctl"
 alias webui="gp preview $(gp url 8080)"
 alias ex1="cd ${GITPOD_REPO_ROOT}/exercises/durable-execution/practice"
 alias ex2="cd ${GITPOD_REPO_ROOT}/exercises/testing-code/practice"
