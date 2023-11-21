@@ -11,14 +11,14 @@ tasks:
     command: |
       echo "waiting for server...."      
       clear
-      source /workspace/edu-101-python-code/.bash_aliases
+      source /workspace/edu-102-python-code/.bash_aliases
       export TEMPORAL_CORS_ORIGINS=http://localhost:3000
       export TEMPORAL_NOTIFY_ON_NEW_VERSION=false
       temporal server start-dev --ui-port 8080 --db-filename $HOME/.cluster-persistence.db
   - name: Worker
     command: |
       gp ports await 7233 && gp ports await 8080 && sleep 25 && gp preview $(gp url 8080)
-      source /workspace/edu-101-python-code/.bash_aliases
+      source /workspace/edu-102-python-code/.bash_aliases
       clear
       echo "Waiting for Python packages to install..."
       sleep 30 # add sleep to give venv time to finish
@@ -29,7 +29,7 @@ tasks:
   - name: Terminal
     command: |
       gp open README.md
-      source /workspace/edu-101-python-code/.bash_aliases
+      source /workspace/edu-102-python-code/.bash_aliases
       clear
       echo "Waiting for Python packages to install..."
       sleep 30  # add sleep to give venv time to finish
@@ -39,7 +39,7 @@ tasks:
     openMode: split-right
   - name: Microservice
     command: |
-      source /workspace/edu-101-python-code/.bash_aliases
+      source /workspace/edu-102-python-code/.bash_aliases
       clear
       echo "Waiting for Python packages to install..."
       sleep 30
