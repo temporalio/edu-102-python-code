@@ -58,7 +58,8 @@ tasks:
       sleep 20  # add sleep to give venv time to finish
       source /workspace/.env/bin/activate
       clear
-      echo "Use this terminal to start your microservice in Exercise 3"
+      echo "Translation Microservice running on this terminal"
+      python /workspace/edu-102-python-code/utilities/microservice/microservice.py
     openMode: split-right
   
 
