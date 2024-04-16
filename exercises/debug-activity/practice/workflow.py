@@ -14,7 +14,7 @@ with workflow.unsafe.imports_passed_through():
 class PizzaOrderWorkflow:
     @workflow.run
     async def order_pizza(self, order: PizzaOrder) -> OrderConfirmation:
-        workflow.logger.info(f"order_pizza workflow invoked with {input}")
+        workflow.logger.info(f"order_pizza workflow invoked")
 
         address = order.address
 
