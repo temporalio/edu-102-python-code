@@ -3,6 +3,7 @@ from datetime import timedelta
 
 from temporalio import workflow
 from temporalio.exceptions import ApplicationError
+from temporalio.common import RetryPolicy
 
 # Import activity, passing it through the sandbox without reloading the module
 with workflow.unsafe.imports_passed_through():
@@ -51,6 +52,7 @@ class PizzaOrderWorkflow:
             PizzaOrderActivities.send_bill,
             bill,
             start_to_close_timeout=timedelta(seconds=5),
+            retry_policy = RetryPolicy(maximum_interval=timedelta(seconds=10))
         )
 
         return confirmation
