@@ -59,7 +59,7 @@ async def test_failed_pizza_order_outside_delivery_error():
                     task_queue="test-pizza-order",
                 )
         assert isinstance(e.value.cause, ApplicationError)
-        assert "Customer lives outside the service area" == str(e.value.cause)
+        assert "customer lives outside the service area" == str(e.value.cause)
 
 
 def create_pizza_order_for_test() -> PizzaOrder:
