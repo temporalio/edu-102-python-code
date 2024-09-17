@@ -15,6 +15,10 @@ with workflow.unsafe.imports_passed_through():
 
 @workflow.defn
 class TranslationWorkflow:
+
+    workflow.logger.workflow_info_on_message = False
+    workflow.logger.workflow_info_on_extra = False
+
     @workflow.run
     async def run(self, input: TranslationWorkflowInput) -> TranslationWorkflowOutput:
         workflow.logger.info(f"tTranslationWorkflow invoked with {input}")
@@ -33,7 +37,7 @@ class TranslationWorkflow:
         )
         hello_message = f"{hello_result.translation}, {input.name}"
 
-        workflow.logger.debug("sleeping between translation calls")
+        workflow.logger.info("sleeping between translation calls")
         await asyncio.sleep(10)
 
         workflow.logger.debug(

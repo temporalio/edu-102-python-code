@@ -13,7 +13,7 @@ class TranslationActivities:
     async def translate_term(
         self, input: TranslationActivityInput
     ) -> TranslationActivityOutput:
-        # TODO Add a logging message using the activity logger at the info level
+        # TODO PART B: Add a logging message using the activity logger at the info level
         # stating that the activity has been invoked. Be sure to include the input.
         base = f"http://localhost:9999/translate"
         url = f"{base}?term={urllib.parse.quote(input.term)}&lang={input.language_code}"
@@ -24,7 +24,7 @@ class TranslationActivities:
                 raise RuntimeError(error_message)
             response_json = await response.json()
             response = TranslationActivityOutput(**response_json)
-            # TODO Add a logging message using the activity logger at the debug
+            # TODO PART B: Add a logging message using the activity logger at the debug
             # level stating that the activity completed successfully. Include
             # the term, language_code and result in your message.
             return response

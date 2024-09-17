@@ -7,12 +7,12 @@ from temporalio.client import Client
 from temporalio.worker import Worker
 from workflow import TranslationWorkflow
 
-# TODO Uncomment the import statement below
+# TODO PART C: Uncomment the import statement below
 # import logging
 
 
 async def main():
-    # TODO Setup logging config and set level to INFO
+    # TODO PART C: Setup logging config and set level to INFO
     client = await Client.connect("localhost:7233", namespace="default")
 
     # Run the worker

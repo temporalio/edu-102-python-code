@@ -15,15 +15,21 @@ with workflow.unsafe.imports_passed_through():
 
 @workflow.defn
 class TranslationWorkflow:
+
+    workflow.logger.workflow_info_on_message = False
+    workflow.logger.workflow_info_on_extra = False
+
     @workflow.run
     async def run(self, input: TranslationWorkflowInput) -> TranslationWorkflowOutput:
-        workflow.logger.info(f"TranslationWorkflow invoked with {input}")
+        # TODO PART A: Add a log message using the workflow logger at the info level
+        # stating that the Workflow has started and the input that was passed in
+        # hint: workflow.logger.LOG_LEVEL
 
         hello_input = TranslationActivityInput(
             language_code=input.language_code, term="hello"
         )
 
-        # TODO Add a log message using the workflow logger at the debug level
+        # TODO PART A: Add a log message using the workflow logger at the debug level
         # stating that the Activity has been invoked. Include the term and
         # language code.
         hello_result = await workflow.execute_activity_method(
@@ -33,12 +39,12 @@ class TranslationWorkflow:
         )
         hello_message = f"{hello_result.translation}, {input.name}"
 
-        # TODO Add a log message using the workflow logger stating that the
+        # TODO PART D: Add a log message using the workflow logger stating that the
         # Workflow is sleeping between translation calls
 
-        # TODO Add a Timer that sleeps for 10 seconds
+        # TODO PART D:Add a Timer that sleeps for 10 seconds
 
-        # TODO Add a log message using the workflow logger at the debug level
+        # TODO PART A:Add a log message using the workflow logger at the debug level
         # stating that the Activity has been invoked. Include the term and language code.
         goodbye_input = TranslationActivityInput(
             language_code=input.language_code, term="goodbye"
