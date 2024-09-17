@@ -51,7 +51,7 @@ the translation, you'll begin by starting that.
 In the previous step you verified that running `translate_term` for Hello was
 invoking properly. Now it is time to test if Goodbye is also working.
 
-1. Edit the `test_activities.py` file
+1. Edit the `test/test_activities.py` file
 2. Copy the tuple in the `pytest.mark.parametrize` list and paste it into the
    list, effectively creating a second entry to test the method on.
 3. Change the term for the `TranslationActivityInput` object in this second
@@ -93,7 +93,7 @@ following steps:
 
 ## Part D: Test a Workflow Definition
 
-1. Edit the `test_workflow.py` file
+1. Edit the `tests/test_workflow.py` file
 2. Add assertions for the following conditions
    - The `hello_message` field in the result is `Bonjour, Pierre`
    - The `goodbye_message` field in the result is `Au revoir, Pierre`
@@ -123,7 +123,7 @@ If you have time and would like an additional challenge,
 continue with the following steps.
 
 1. Make a copy of the existing Workflow Test by running
-   `cp test_workflow.py test_workflow_with_mocks.py`
+   `cp tests/test_workflow.py tests/test_workflow_with_mocks.py`
 2. Edit the `test_workflow_with_mocks.py` file
 3. Add the following imports
    ```python
