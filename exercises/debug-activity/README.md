@@ -144,8 +144,8 @@ layout.
    - Change the `amount` to `6500` ($65)
    - Change the comment next to the `amount` field to say
      `amount qualifies for discount`
-   - Change the expected price in the `assert.Equal` statement to `6000`,
-     which is the $65 amount minus the $5 discount.
+   - Change the expected price in the `assert` statement that checks `confirmation.amount`
+     to `6000`, which is the $65 amount minus the $5 discount.
 4. Save the changes and close the editor
 5. Run `python -m pytest`. Since you have not yet fixed the bug, the test will fail.
 6. Open the `activities.py` file in the editor and find where the `send_bill`
