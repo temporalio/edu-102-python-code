@@ -48,7 +48,7 @@ class TranslationWorkflow:
             goodbye_input,
             start_to_close_timeout=timedelta(seconds=5),
         )
-        goodbye_message = f"{goodbye_result.translation} {input.name}"
+        goodbye_message = f"{goodbye_result.translation}, {input.name}"
 
         return TranslationWorkflowOutput(
             hello_message=hello_message, goodbye_message=goodbye_message
