@@ -97,7 +97,7 @@ vscode:
     - redhat.java
     - vscjava.vscode-java-test
     - vscjava.vscode-java-debug
-    - wingrunr21.vscode-ruby
+    - Shopify.ruby-lsp
     - ms-toolsai.jupyter
     - ms-toolsai.jupyter-keymap
     - ms-toolsai.jupyter-renderers
