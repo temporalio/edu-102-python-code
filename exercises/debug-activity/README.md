@@ -13,6 +13,10 @@ Make your changes to the code in the `practice` subdirectory (look for
 the code). If you need a hint or want to verify your changes, look at
 the complete version in the `solution` subdirectory.
 
+### Prerequisite: Start the Temporal Service
+
+1. Start the Temporal Service with `temporal server start-dev`
+
 ## Prerequisite: Ensure Your Virtual Environment is activated
 
 If you haven't already started the Translation Microservice used by this exercise,
@@ -44,7 +48,7 @@ does by using the Web UI to interpret the Event History.
 
 Open the Web UI and navigate to the detail page for the Workflow
 Execution you just ran, which has the Workflow Type `PizzaWorkflow`
-and Workflow ID `pizza-workflow-order-XD001`).
+and Workflow ID `pizza-workflow-order-XD001`.
 
 If the detail page still shows a status of Running, wait a few seconds
 and refresh the page. Once the page shows a status of Completed, use
@@ -87,7 +91,7 @@ Take a moment to switch to the Compact view, and if one of the rows in the
 table is expanded, click to collapse it. Do you find that this view makes
 it easier to see the Activities and Timer that ran during the execution?
 
-Click "Expand All" near the upper-right corner of this table. Do you find
+Click "Expand All" at the top of this table. Do you find
 that this helps you to correlate Events related to the Activities and Timer?
 
 Since the Web UI remembers the current view, be sure to click "Collapse All"
@@ -178,7 +182,7 @@ in the Workflow code, rather than in an Activity, since that is typically
 not prone to failure and unlikely to affect whether the Workflow executes
 in a deterministic manner. This exercise implemented it in the Activity,
 since you can deploy a fix to Activity code without a risk of causing a
-non-deterministic error. Later in this course, you'll learn how to safely
+non-deterministic error. As you learned earlier in this course, there are also ways to safely
 deploy changes to Workflow Definitions.
 
 ### This is the end of the exercise.

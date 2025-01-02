@@ -42,7 +42,7 @@ async def test_send_bill_typical_order():
         customer_id=12983,
         order_number="XD001",
         description="2 large cheese pizzas",
-        amount=2600,
+        amount=2600, # amount does not qualify for discount
     )
     activity_environment = ActivityEnvironment()
     activities = PizzaOrderActivities()
