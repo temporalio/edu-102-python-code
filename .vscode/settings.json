@@ -3,9 +3,15 @@
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "python.formatting.provider": "none",
+    "workbench.editorAssociations": {
+        "README.md": "vscode.markdown.preview.editor"
+    },
     "go.alternateTools": {
         "go": "/home/linuxbrew/.linuxbrew/bin/go",
     },
+    "markdown.styles": [
+        "style.css"
+    ],
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.profiles.linux": {
         "bash": {
