@@ -10,7 +10,7 @@ During this exercise, you will
 
 Make your changes to the code in the `practice` subdirectory (look for `TODO` comments that will guide you to where you should make changes to the code). If you need a hint or want to verify your changes, look at the complete version in the `solution` subdirectory.
 
-## Prerequisite: Ensure your Virtual Environment is activated, the Microservice is running, and the Temporal Service is running
+## Prerequisite: Ensure the Microservice is running and your Virtual Environment is activated
 
 If you haven't already started the Translation Microservice used by this exercise,
 do so in a separate terminal.
@@ -31,10 +31,6 @@ environment**
    1. `cd utilities/microservice`
 3. Run the microservice
    1. `python microservice.py`
-
-### Start the Temporal Service
-
-1. Start the Temporal Service with `temporal server start-dev`
 
 ## Part A: Add Logging to the Workflow Code
 

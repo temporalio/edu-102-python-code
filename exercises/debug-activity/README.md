@@ -13,10 +13,6 @@ Make your changes to the code in the `practice` subdirectory (look for
 the code). If you need a hint or want to verify your changes, look at
 the complete version in the `solution` subdirectory.
 
-### Prerequisite: Start the Temporal Service
-
-1. Start the Temporal Service with `temporal server start-dev`
-
 ## Prerequisite: Ensure Your Virtual Environment is activated
 
 If you haven't already started the Translation Microservice used by this exercise,
