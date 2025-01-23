@@ -99,6 +99,8 @@ You can launch an exercise environment for this course in GitPod by
 clicking the button below:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/temporalio/edu-102-python-code)
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/temporalio/edu-102-go-code)
+
 
 Alternatively, you can follow
 [these instructions](https://learn.temporal.io/getting_started/python/dev_environment/) to
