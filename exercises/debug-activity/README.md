@@ -19,10 +19,6 @@ If you haven't already started the Translation Microservice used by this exercis
 do so in a separate terminal by navigating to `utilities/microservice`
 and running `python microservice.py`.
 
-**Note: If you're using the Gitpod environment to run this exercise you can
-skip this step. An instance of the Microservice is already running in your
-environment**
-
 ### Activate the Virtual Environment
 
 1. Ensure that the virtual environment you setup at the beginning of the
