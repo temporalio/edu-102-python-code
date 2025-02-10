@@ -95,10 +95,15 @@ However, the packages are already installed, so there is no need to run pip agai
 
 ## Exercise Environment for this Course
 
-You can launch an exercise environment for this course in GitPod by
-clicking the button below:
+You can launch an exercise environment for this course using Gitpod or Codeanywhere:
+
+### 🌐 Gitpod
+
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/temporalio/edu-102-python-code)
+
+### 🌍 Codeanywhere
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/temporalio/edu-102-python-code)
 
 Alternatively, you can follow
 [these instructions](https://learn.temporal.io/getting_started/python/dev_environment/) to
