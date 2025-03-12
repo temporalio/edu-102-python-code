@@ -101,3 +101,10 @@ $ env\Scripts\activate
 ```
 
 However, the packages are already installed, so there is no need to run pip again.
+
+## Exercise Environment for this Course
+
+You can launch an exercise environment for this course using GitHub Codespaces by 
+following [this](codespaces.md) walkthrough.
+
+Alternatively, you can perform these exercises directly on your computer. Refer to the instructions about setting up a local development environment, which you'll find in the "About this Course" chapter.
