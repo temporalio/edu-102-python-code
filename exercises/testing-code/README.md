@@ -44,7 +44,8 @@ test, which you'll find in the `test_activities.py` file in the `tests` director
 Since the test runs the Activity, which in turn calls the microservice to do
 the translation, you'll begin by starting that.
 
-1. Run the `python -m pytest` command to execute the provided test
+1. Navigate to `exercises/testing-code/practice`
+2. Run the `python -m pytest` command to execute the provided test
 
 ## Part B: Add another test case for the Activity
 
@@ -136,11 +137,12 @@ continue with the following steps.
    ```
 4. Create a new async function to mock your Activity.
    1. Name it `translate_term_mocked_french` and decorate it with
-      `@activity.defn(name="translate_term")`. The function should take `TranslationActivityInput`
+      `@activity.defn(name="translate_term")`. The function's signature should
+      match that of the activity it is mocking.
    2. In the body of your new mocked Activity, write an if statement that returns
       a new `TranslationActivityOutput` object containing `Bonjour` if the term
       that was passed in via the `TranslationActivityInput` was `hello`. Otherwise
-      return a new `TranslationActivityObject` containing `Au revoir`.
+      return a new `TranslationActivityOutput` containing `Au revoir`.
    3. The full mocked Activity is shown below:
    ```python
    @activity.defn(name="translate_term")
