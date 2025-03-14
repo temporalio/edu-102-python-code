@@ -43,9 +43,9 @@ in Activity definitions.
 
 Take a look at the `activities.py` file to see how the `translate_term` method
 takes in the `TranslationActivityInput` dataclass as an input parameter. Also
-notice how that method returns a `TranslationActivityOutput`` object for the output.
+notice how that method returns a `TranslationActivityOutput` object for the output.
 
-## Part D: Run the Translation Workflow
+## Part C: Run the Translation Workflow
 
 To run the workflow
 
