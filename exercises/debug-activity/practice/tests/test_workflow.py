@@ -58,7 +58,7 @@ async def test_failed_pizza_order_outside_delivery_error():
                     id="test-translation-workflow-id",
                     task_queue="test-pizza-order",
                 )
-        assert isinstance(e.value, WorkflowFailureError)
+        assert isinstance(e.value.cause, ApplicationError)
         assert "customer lives outside the service area" == str(e.value.cause)
 
 
