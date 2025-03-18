@@ -17,7 +17,7 @@ with workflow.unsafe.imports_passed_through():
 class TranslationWorkflow:
 
     workflow.logger.workflow_info_on_message = False
-    workflow.logger.workflow_info_on_extra = False
+    #workflow.logger.workflow_info_on_extra = False
 
     @workflow.run
     async def run(self, input: TranslationWorkflowInput) -> TranslationWorkflowOutput:
@@ -44,11 +44,14 @@ class TranslationWorkflow:
 
         # TODO PART D:Add a Timer that sleeps for 10 seconds
 
+
         # TODO PART A:Add a log message using the workflow logger at the debug level
         # stating that the Activity has been invoked. Include the term and language code.
+        
         goodbye_input = TranslationActivityInput(
             language_code=input.language_code, term="goodbye"
         )
+
         goodbye_result = await workflow.execute_activity_method(
             TranslationActivities.translate_term,
             goodbye_input,
