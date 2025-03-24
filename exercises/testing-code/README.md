@@ -18,10 +18,6 @@ the complete version in the `solution` subdirectory.
 If you haven't already started the Translation Microservice used by this exercise,
 do so in a separate terminal.
 
-**Note: If you're using the Gitpod environment to run this exercise you can
-skip this step. An instance of the Microservice is already running in your
-environment**
-
 ### Activate the Virtual Environment
 
 1. Ensure that the virtual environment you setup at the beginning of the
