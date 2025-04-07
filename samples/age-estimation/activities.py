@@ -1,7 +1,7 @@
 import urllib.parse
 
 import aiohttp
-from models import EstimatorResponse
+from shared import EstimatorResponse
 from temporalio import activity
 
 
