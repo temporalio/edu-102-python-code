@@ -13,7 +13,7 @@ MarkupSafe==2.1.5
 multidict==6.0.5
 packaging==24.0
 pluggy==1.5.0
-protobuf==5.27.0
+protobuf==5.29.5
 pytest==8.2.2
 pytest-asyncio==0.23.7
 temporalio==1.10.0
