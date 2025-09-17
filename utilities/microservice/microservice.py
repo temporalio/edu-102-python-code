@@ -14,7 +14,7 @@ translations = {
     "fr": {"hello": "bonjour", "goodbye": "au revoir", "thanks": "merci"},
     "lv": {"hello": "sveiks", "goodbye": "ardievu", "thanks": "paldies"},
     "mi": {"hello": "kia ora", "goodbye": "poroporoaki", "thanks": "whakawhetai koe"},
-    "sk": {"hello": "ahoj", "goodbye": "zbohom", "thanks": "ďakujem koe"},
+    "sk": {"hello": "ahoj", "goodbye": "zbohom", "thanks": "ďakujem"},
     "tr": {"hello": "merhaba", "goodbye": "güle güle", "thanks": "teşekkür ederim"},
     "zu": {"hello": "hamba kahle", "goodbye": "sawubona", "thanks": "ngiyabonga"},
 }
