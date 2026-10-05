@@ -106,7 +106,7 @@ Definition contains a `await asyncio.sleep(15)` call that adds a 15-second delay
 to the Workflow Execution. This is because of the time-skipping feature
 provided by the test environment.
 
-Second, calls to `RegisterActivity` near the top of the test indicate
+Second, calls to `TranslationActivities` near the top of the test indicate
 that the Activity Definitions are executed as part of this Workflow
 test. As you learned, you can test your Workflow Definition in isolation
 from the Activity implementations by using mocks. The optional exercise
