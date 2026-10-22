@@ -16,7 +16,7 @@ translations = {
     "mi": {"hello": "kia ora", "goodbye": "poroporoaki", "thanks": "whakawhetai koe"},
     "sk": {"hello": "ahoj", "goodbye": "zbohom", "thanks": "ďakujem"},
     "tr": {"hello": "merhaba", "goodbye": "güle güle", "thanks": "teşekkür ederim"},
-    "zu": {"hello": "hamba kahle", "goodbye": "sawubona", "thanks": "ngiyabonga"},
+    "zu": {"hello": "sawubona", "goodbye": "hamba kahle", "thanks": "ngiyabonga"},
 }
 
 
@@ -30,13 +30,17 @@ def translate():
     if not lang:
         return jsonify({"error": "Missing required 'lang' parameter"}), 500
 
-    if lang not in translations:
+    # Match terms and language codes case-insensitively (e.g., "Hello" or "HELLO")
+    lang_key = lang.lower()
+    term_key = term.lower()
+
+    if lang_key not in translations:
         return jsonify({"error": f"Invalid language code '{lang}'"}), 500
 
-    if term not in translations[lang]:
+    if term_key not in translations[lang_key]:
         return jsonify({"error": f"Invalid translation term '{term}'"}), 500
 
-    translation = translations[lang][term]
+    translation = translations[lang_key][term_key]
     capitalized_translation = translation.capitalize()
 
     print(f"{term} translated to {lang} with result {translation}")

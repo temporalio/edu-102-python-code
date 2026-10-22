@@ -52,7 +52,7 @@ invoking properly. Now it is time to test if Goodbye is also working.
 2. Copy the tuple in the `pytest.mark.parametrize` list and paste it into the
    list, effectively creating a second entry to test the method on.
 3. Change the term for the `TranslationActivityInput` object in this second
-   tuple from `Hello` to `Goodbye`
+   tuple from `hello` to `goodbye`
 4. Change the language code for the `TranslationActivityInput` object in this
    second tuple from `de` (German) to `lv` (Latvian)
 5. Change the translation for the `TranslationActivityOutput` object in this second
